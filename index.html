@@ -153,80 +153,6 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xie-huan.github.io/2020/04/18/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/head_pro.png">
-      <meta itemprop="name" content="缘溪行">
-      <meta itemprop="description" content="忘路之远近">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="缘溪行">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/18/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-04-18 09:04:00" itemprop="dateCreated datePublished" datetime="2020-04-18T09:04:00+08:00">2020-04-18</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-17 14:19:01" itemprop="dateModified" datetime="2020-04-17T14:19:01+08:00">2020-04-17</time>
-              </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2020/04/18/hello-world/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://xie-huan.github.io/2020/04/17/R-squared/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -258,7 +184,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-18 10:18:23" itemprop="dateModified" datetime="2020-04-18T10:18:23+08:00">2020-04-18</time>
+                <time title="修改时间：2020-04-18 14:24:38" itemprop="dateModified" datetime="2020-04-18T14:24:38+08:00">2020-04-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -284,31 +210,15 @@
           <h1 id="R-Squared"><a href="#R-Squared" class="headerlink" title="R Squared"></a>R Squared</h1><h2 id="为什么不使用前面的标准？"><a href="#为什么不使用前面的标准？" class="headerlink" title="为什么不使用前面的标准？"></a>为什么不使用前面的标准？</h2><p>前面介绍的<strong>MAE</strong>、<strong>MSE</strong>、<strong>RMSE</strong>算出来都是一个数值，用于大致估算由回归方程算出的值。</p>
 <p>对于两种不同数据，如用使用同一种线性回归方法，用RMSE标准，预测房价的误差RMSE结果为5万元，预测成绩的差距RMSE为10分，我们只能用实际的感觉来估算这个误差大不大，不能用数据化的指标来判断线性回归算法是否足够好。</p>
 <p>而kNN算法的衡量标准，是使用分类精确度来评判，值越接近1，表示分类效果越好；越接近0，表示分类效果越差。  </p>
-<p>我们想让衡量线性回归算法的标准也具有上述性质，所以使用R Squared衡量标准。</p>
-<h2 id="R-Squared的定义"><a href="#R-Squared的定义" class="headerlink" title="R Squared的定义"></a>R Squared的定义</h2><p><strong>公式:</strong>  <script type="math/tex">R^{2}=1-\frac{S S_{\text {residual}}}{S S_{\text {total}}}</script></p>
-<p>其中：<br>$S S_{\text {residual}}$ = Residual Sum of Squares<br>$S S_{\text {total}}$ = Total Sum of Squares  </p>
-<script type="math/tex; mode=display">R^{2}=1-\frac{\sum_{i}\left(\hat{y}^{(i)}-y^{(i)}\right)^{2}}{\sum_{i}\left(\bar{y}-y^{(i)}\right)^{2}}</script><h2 id="为什么要使用R-Squared？（或R-Squared为什么好？）"><a href="#为什么要使用R-Squared？（或R-Squared为什么好？）" class="headerlink" title="为什么要使用R Squared？（或R Squared为什么好？）"></a>为什么要使用R Squared？（或R Squared为什么好？）</h2><p>$S S_{\text {residual}}$可以看作使用我们模型预测产生的错误  </p>
-<p>$S S_{\text {total}}$是使用$y=\bar{y}$预测产生的错误  </p>
-<p>$y=\bar{y}$这个模型是y的均值，即所有预测值均为y的均值，与x无关，在机器学习中，这个模型称为Baseline Model。很显然这个模型的误差肯定很大。   </p>
-<p>$\frac{S S_{\text {residual}}}{S S_{\text {total}}}$ 意味着我们的模型的误差和一个相对较差的模型的误差的比值，显然，我们的模型误差越小，这个比值就越小，而R Squared这个公式就越接近1，符合了上面所述的性质。</p>
-<h2 id="R-Squared性质"><a href="#R-Squared性质" class="headerlink" title="R Squared性质"></a>R Squared性质</h2><ul>
-<li>$R^{2}&lt;1$ </li>
-<li>$R^{2}$ 越大越好。当我们的预测模型不犯任何错误时，$R^{2}$得到最大值1</li>
-<li>当我们的模型等于基准模型时，$R^{2}$为0</li>
-<li>如果$R^{2}&lt;0$，说明我们学习到的模型还不如基准模型。此时，很有可能我们的数据不存在任何线性关系。</li>
-</ul>
-<h2 id="公式变形"><a href="#公式变形" class="headerlink" title="公式变形"></a>公式变形</h2><p>$\begin{aligned} R^{2}=1-\frac{\sum_{i}\left(\hat{y}^{(i)}-y^{(i)}\right)^{2}}{\sum_{i}\left(\bar{y}-y^{(i)}\right)^{2}} &amp;=1-\frac{\left(\sum_{i=1}^{m}\left(\hat{y}^{(i)}-y^{(i)}\right)^{2}\right) / m}{\left(\sum_{i=1}^{m}\left(y^{(i)}-\bar{y}\right)^{2}\right) / m} &amp;=1-\frac{M S E(\hat{y}, y)}{\operatorname{Var}(y)} \end{aligned}$</p>
-<h2 id="编程实现"><a href="#编程实现" class="headerlink" title="编程实现"></a>编程实现</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># R squared</span></span><br><span class="line"><span class="comment"># 加载数据</span></span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> datasets</span><br><span class="line">boston = datasets.load_boston()</span><br><span class="line">x = boston.data[:,<span class="number">5</span>]  <span class="comment"># 只使用房间数量这个特征</span></span><br><span class="line">y = boston.target</span><br><span class="line"></span><br><span class="line"><span class="comment"># 真实值中，数据统计有上限，去掉这种上限异常值</span></span><br><span class="line">x = x[y &lt; <span class="number">50</span>]</span><br><span class="line">y = y[y &lt; <span class="number">50</span>]</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 绘图</span></span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">plt.scatter(x,y)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p><img src="/2020/04/17/R-squared/output_6_0.png" alt="房间个数与房价散点图"></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 拆分数据为训练集、测试集</span></span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line">x_train,x_test,y_train,y_test = train_test_split(x,y,random_state=<span class="number">666</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用自己实现的简单线性回归</span></span><br><span class="line"><span class="keyword">from</span> Machine_Learning.LinearReg.SimpleLinearRegression <span class="keyword">import</span> SimpleLinearRegression2</span><br><span class="line">reg = SimpleLinearRegression2()</span><br><span class="line">reg.fit(x_train,y_train)</span><br><span class="line">y_predict = reg.predict(x_test)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> Machine_Learning.LinearReg.metrics <span class="keyword">import</span> mean_squared_error</span><br><span class="line"><span class="keyword">from</span> Machine_Learning.LinearReg.metrics <span class="keyword">import</span> root_mean_squared_error</span><br><span class="line"><span class="keyword">from</span> Machine_Learning.LinearReg.metrics <span class="keyword">import</span> mean_absolute_error</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="comment"># 计算R squared</span></span><br><span class="line">R_squared = <span class="number">1</span> - mean_squared_error(y_test, y_predict) / np.var(y_test)</span><br><span class="line">R_squared</span><br></pre></td></tr></table></figure>
-<pre><code>0.5682464825049472
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在自己的代码中实现后</span></span><br><span class="line"><span class="keyword">from</span> Machine_Learning.LinearReg.metrics <span class="keyword">import</span> r2_score</span><br><span class="line">r2_score(y_test, y_predict)</span><br></pre></td></tr></table></figure>
-<pre><code>0.5682464825049472
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 调用sklearn中包实现</span></span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> r2_score</span><br><span class="line">r2_score(y_test,y_predict)</span><br></pre></td></tr></table></figure>
-<pre><code>0.5682464825049474
-</code></pre><h2 id="其中，也可调用在sklearn中的简单线性回归算法，不用自己实现的简单线性回归算法"><a href="#其中，也可调用在sklearn中的简单线性回归算法，不用自己实现的简单线性回归算法" class="headerlink" title="其中，也可调用在sklearn中的简单线性回归算法，不用自己实现的简单线性回归算法"></a>其中，也可调用在sklearn中的简单线性回归算法，不用自己实现的简单线性回归算法</h2>
+<p>我们想让衡量线性回归算法的标准也具有上述性质，所以使用R Squared衡量标准。<br></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/04/17/R-squared/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -469,7 +379,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -480,7 +390,7 @@
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span>
       </div>
   </nav>
