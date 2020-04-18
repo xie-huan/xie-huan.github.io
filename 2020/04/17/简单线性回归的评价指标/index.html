@@ -17,13 +17,13 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"xie-huan.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="R Squared为什么不使用前面的标准？前面介绍的MAE、MSE、RMSE算出来都是一个数值，用于大致估算由回归方程算出的值。 对于两种不同数据，如用使用同一种线性回归方法，用RMSE标准，预测房价的误差RMSE结果为5万元，预测成绩的差距RMSE为10分，我们只能用实际的感觉来估算这个误差大不大，不能用数据化的指标来判断线性回归算法是否足够好。 而kNN算法的衡量标准，是使用分类精确度来评判，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="简单线性回归的评价指标">
-<meta property="og:url" content="http://yoursite.com/2020/04/17/%E7%AE%80%E5%8D%95%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%9A%84%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/index.html">
+<meta property="og:url" content="https://xie-huan.github.io/2020/04/17/%E7%AE%80%E5%8D%95%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%9A%84%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/index.html">
 <meta property="og:site_name" content="缘溪行">
 <meta property="og:description" content="R Squared为什么不使用前面的标准？前面介绍的MAE、MSE、RMSE算出来都是一个数值，用于大致估算由回归方程算出的值。 对于两种不同数据，如用使用同一种线性回归方法，用RMSE标准，预测房价的误差RMSE结果为5万元，预测成绩的差距RMSE为10分，我们只能用实际的感觉来估算这个误差大不大，不能用数据化的指标来判断线性回归算法是否足够好。 而kNN算法的衡量标准，是使用分类精确度来评判，">
 <meta property="og:locale" content="zh_CN">
@@ -35,7 +35,7 @@
 <meta property="article:tag" content="评价指标">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/04/17/%E7%AE%80%E5%8D%95%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%9A%84%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/">
+<link rel="canonical" href="https://xie-huan.github.io/2020/04/17/%E7%AE%80%E5%8D%95%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%9A%84%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/">
 
 
 <script id="page-configurations">
@@ -159,7 +159,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/17/%E7%AE%80%E5%8D%95%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%9A%84%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/">
+    <link itemprop="mainEntityOfPage" href="https://xie-huan.github.io/2020/04/17/%E7%AE%80%E5%8D%95%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E7%9A%84%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head_pro.png">
@@ -253,13 +253,10 @@
 
         
     <div class="post-nav">
+      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/04/17/R-squared/" rel="prev" title="衡量线性回归算法好坏的指标——R-Squared">
-      <i class="fa fa-chevron-left"></i> 衡量线性回归算法好坏的指标——R-Squared
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/04/18/hello-world/" rel="next" title="Hello World">
-      Hello World <i class="fa fa-chevron-right"></i>
+    <a href="/2020/04/17/R-squared/" rel="next" title="衡量线性回归算法好坏的指标——R-Squared">
+      衡量线性回归算法好坏的指标——R-Squared <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
