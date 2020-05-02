@@ -20,20 +20,23 @@
     var CONFIG = {"hostname":"xie-huan.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="线性回归算法介绍什么是线性回归待更新">
+  <meta name="description" content="线性回归算法介绍什么是线性回归　　在统计学中，线性回归(Linear Regression)是利用称为线性回归方程的最小平方函数对一个或多个自变量和因变量之间关系进行建模的一种回归分析。这种函数是一个或多个称为回归系数的模型参数的线性组合。只有一个自变量的情况称为简单回归，大于一个自变量情况的叫做多元回归。——摘自百度百科">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性回归介绍及Python实现">
 <meta property="og:url" content="https://xie-huan.github.io/2020/04/23/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8APython%E5%AE%9E%E7%8E%B0/index.html">
 <meta property="og:site_name" content="缘溪行">
-<meta property="og:description" content="线性回归算法介绍什么是线性回归待更新">
+<meta property="og:description" content="线性回归算法介绍什么是线性回归　　在统计学中，线性回归(Linear Regression)是利用称为线性回归方程的最小平方函数对一个或多个自变量和因变量之间关系进行建模的一种回归分析。这种函数是一个或多个称为回归系数的模型参数的线性组合。只有一个自变量的情况称为简单回归，大于一个自变量情况的叫做多元回归。——摘自百度百科">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xie-huan.github.io/2020/04/23/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8APython%E5%AE%9E%E7%8E%B0/%E9%9C%80%E8%A6%81%E6%8B%9F%E5%90%88%E7%9A%84%E6%95%B0%E6%8D%AE.png">
+<meta property="og:image" content="https://xie-huan.github.io/2020/04/23/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8APython%E5%AE%9E%E7%8E%B0/%E6%8B%9F%E5%90%88%E7%9A%84%E6%95%B0%E6%8D%AE.png">
 <meta property="article:published_time" content="2020-04-23T14:10:04.000Z">
-<meta property="article:modified_time" content="2020-04-23T14:25:24.607Z">
+<meta property="article:modified_time" content="2020-05-02T15:22:28.843Z">
 <meta property="article:author" content="缘溪行">
 <meta property="article:tag" content="机器学习">
 <meta property="article:tag" content="线性回归">
 <meta property="article:tag" content="代码实现">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xie-huan.github.io/2020/04/23/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8APython%E5%AE%9E%E7%8E%B0/%E9%9C%80%E8%A6%81%E6%8B%9F%E5%90%88%E7%9A%84%E6%95%B0%E6%8D%AE.png">
 
 <link rel="canonical" href="https://xie-huan.github.io/2020/04/23/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8APython%E5%AE%9E%E7%8E%B0/">
 
@@ -209,10 +212,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-04-23 22:10:04 / 修改时间：22:25:24" itemprop="dateCreated datePublished" datetime="2020-04-23T22:10:04+08:00">2020-04-23</time>
+              <time title="创建时间：2020-04-23 22:10:04" itemprop="dateCreated datePublished" datetime="2020-04-23T22:10:04+08:00">2020-04-23</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-02 23:22:28" itemprop="dateModified" datetime="2020-05-02T23:22:28+08:00">2020-05-02</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -241,9 +250,34 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="线性回归算法介绍"><a href="#线性回归算法介绍" class="headerlink" title="线性回归算法介绍"></a>线性回归算法介绍</h1><h2 id="什么是线性回归"><a href="#什么是线性回归" class="headerlink" title="什么是线性回归"></a>什么是线性回归</h2><p>待更新</p>
+        <h1 id="线性回归算法介绍"><a href="#线性回归算法介绍" class="headerlink" title="线性回归算法介绍"></a>线性回归算法介绍</h1><h2 id="什么是线性回归"><a href="#什么是线性回归" class="headerlink" title="什么是线性回归"></a>什么是线性回归</h2><p>　　在统计学中，线性回归(Linear Regression)是利用称为线性回归方程的最小平方函数对一个或多个<a href="https://baike.baidu.com/item/自变量" target="_blank" rel="noopener">自变量</a>和<a href="https://baike.baidu.com/item/因变量" target="_blank" rel="noopener">因变量</a>之间关系进行建模的一种<a href="https://baike.baidu.com/item/回归分析" target="_blank" rel="noopener">回归分析</a>。这种函数是一个或多个称为回归系数的模型参数的线性组合。只有一个自变量的情况称为简单回归，大于一个自变量情况的叫做多元回归。——摘自百度百科</p>
 <a id="more"></a>
-<h2 id="线性回归算法的特点"><a href="#线性回归算法的特点" class="headerlink" title="线性回归算法的特点"></a>线性回归算法的特点</h2><h2 id="线性回归算法的流程"><a href="#线性回归算法的流程" class="headerlink" title="线性回归算法的流程"></a>线性回归算法的流程</h2><h2 id="回归问题与分类问题的区别"><a href="#回归问题与分类问题的区别" class="headerlink" title="回归问题与分类问题的区别"></a>回归问题与分类问题的区别</h2><h1 id="线性回归算法实现"><a href="#线性回归算法实现" class="headerlink" title="线性回归算法实现"></a>线性回归算法实现</h1><h2 id="简单线性回归算法"><a href="#简单线性回归算法" class="headerlink" title="简单线性回归算法"></a>简单线性回归算法</h2><h3 id="简单线性回归算法的实现思路"><a href="#简单线性回归算法的实现思路" class="headerlink" title="简单线性回归算法的实现思路"></a>简单线性回归算法的实现思路</h3><h3 id="简单例子实现简单线性回归算法"><a href="#简单例子实现简单线性回归算法" class="headerlink" title="简单例子实现简单线性回归算法"></a>简单例子实现简单线性回归算法</h3><h3 id="使用向量化方法实现"><a href="#使用向量化方法实现" class="headerlink" title="使用向量化方法实现"></a>使用向量化方法实现</h3><h3 id="效率比较"><a href="#效率比较" class="headerlink" title="效率比较"></a>效率比较</h3><h2 id="线性回归评价指标"><a href="#线性回归评价指标" class="headerlink" title="线性回归评价指标"></a>线性回归评价指标</h2><h3 id="MSE、MAE、RMSE"><a href="#MSE、MAE、RMSE" class="headerlink" title="MSE、MAE、RMSE"></a>MSE、MAE、RMSE</h3><h3 id="R-Squared"><a href="#R-Squared" class="headerlink" title="R Squared"></a>R Squared</h3><h2 id="多元线性回归模型"><a href="#多元线性回归模型" class="headerlink" title="多元线性回归模型"></a>多元线性回归模型</h2><h3 id="正规方程"><a href="#正规方程" class="headerlink" title="正规方程"></a>正规方程</h3><h3 id="调用sklearn封装好的模型"><a href="#调用sklearn封装好的模型" class="headerlink" title="调用sklearn封装好的模型"></a>调用sklearn封装好的模型</h3><h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><h2 id="使用kNN回归器实现回归"><a href="#使用kNN回归器实现回归" class="headerlink" title="使用kNN回归器实现回归"></a>使用kNN回归器实现回归</h2><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><h2 id><a href="#" class="headerlink" title=" "></a> </h2><h1 id="-1"><a href="#-1" class="headerlink" title=" "></a> </h1>
+<h2 id="线性回归算法的特点"><a href="#线性回归算法的特点" class="headerlink" title="线性回归算法的特点"></a>线性回归算法的特点</h2><p>基本特点：</p>
+<ul>
+<li>解决回归问题（回想kNN算法解决分类问题）</li>
+<li>思想简单，容易实现</li>
+<li>许多强大的非线性模型的基础</li>
+<li>结果具有很好的可解释性</li>
+<li>蕴含机器学习中许多重要的思想</li>
+</ul>
+<p>与kNN的区别：</p>
+<ul>
+<li>kNN解决分类问题，分类问题中，数据的轴都表示特征</li>
+<li>线性回归解决回归问题，回归问题中，横轴为特征，纵轴为标签</li>
+</ul>
+<p>　　样本特征只有一个，称为简单线性回归</p>
+<h2 id="简单线性回归的目标及解决问题的一般思路"><a href="#简单线性回归的目标及解决问题的一般思路" class="headerlink" title="简单线性回归的目标及解决问题的一般思路"></a>简单线性回归的目标及解决问题的一般思路</h2><p>　　我们使用一个简单的例子来说明简单线性回归的目标及其简单思路。如下图的数据，横轴代表特征，纵轴代表标签。</p>
+<p><img src="/2020/04/23/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8APython%E5%AE%9E%E7%8E%B0/需要拟合的数据.png" alt></p>
+<p>　　我们想要将数据点尽可能用一条直线，来拟合我们的数据点。如下图所示</p>
+<p><img src="/2020/04/23/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8APython%E5%AE%9E%E7%8E%B0/拟合的数据.png" alt><br>　　怎么拟合才算好呢？我们用所有直线预测的点与原数据的差的平方的和作为标准，即<script type="math/tex">\sum_{i=1}^{m}\left(y^{(i)}-\hat{y}^{(i)}\right)^{2}</script>，这个标准值越小，就说明我们求得的直线拟合效果越好。其中，<script type="math/tex">\hat{y}^{(i)}=a x^{(i)}+b</script>，这里的a和b就是我们要求得的参数。用一句话来描述，就是，找到a和b，使<script type="math/tex">\sum_{i=1}^{m}\left(y^{(i)}-a x^{(i)}-b\right)^{2}</script>尽可能小。</p>
+<p>　　上述目标函数，也被称为损失函数（loss function），要训练好一个模型，就要最小化这个模型的损失函数的值。与之对应的是效用函数（utility function）。解决很多问题的一个思路是：</p>
+<ol>
+<li>通过分析问题，确定问题的损失函数或效用函数</li>
+<li>通过最优化损失函数或效用函数，获得机器学习的模型</li>
+</ol>
+<p>　　许多机器学习算法都运用此思路，如线性回归、多项式回归、逻辑回归、SVM、神经网络等。</p>
+<p>　　一个最优决策应具有这样的性质，不管初始状态和初始决策如何，剩下的决策（整个最优决策中的一部分）对于从这一级开始的后续多级过程，仍然是一个最优决策。应用最优性原理，可以把多级决策问题的求解过程看作是一个连续递推过程，由后向前逐级推算。在求解过程中，前一级的决策和输出状态只是后一级的初始条件（初始状态），并不影响后续子过程的最优决策。——摘自百度百科</p>
+<h1 id="线性回归算法实现"><a href="#线性回归算法实现" class="headerlink" title="线性回归算法实现"></a>线性回归算法实现</h1><h2 id="简单线性回归算法"><a href="#简单线性回归算法" class="headerlink" title="简单线性回归算法"></a>简单线性回归算法</h2><h3 id="简单线性回归算法的实现思路"><a href="#简单线性回归算法的实现思路" class="headerlink" title="简单线性回归算法的实现思路"></a>简单线性回归算法的实现思路</h3><h3 id="简单例子实现简单线性回归算法"><a href="#简单例子实现简单线性回归算法" class="headerlink" title="简单例子实现简单线性回归算法"></a>简单例子实现简单线性回归算法</h3><h3 id="使用向量化方法实现"><a href="#使用向量化方法实现" class="headerlink" title="使用向量化方法实现"></a>使用向量化方法实现</h3><h3 id="效率比较"><a href="#效率比较" class="headerlink" title="效率比较"></a>效率比较</h3><h2 id="线性回归评价指标"><a href="#线性回归评价指标" class="headerlink" title="线性回归评价指标"></a>线性回归评价指标</h2><h3 id="MSE、MAE、RMSE"><a href="#MSE、MAE、RMSE" class="headerlink" title="MSE、MAE、RMSE"></a>MSE、MAE、RMSE</h3><h3 id="R-Squared"><a href="#R-Squared" class="headerlink" title="R Squared"></a>R Squared</h3><h2 id="多元线性回归模型"><a href="#多元线性回归模型" class="headerlink" title="多元线性回归模型"></a>多元线性回归模型</h2><h3 id="正规方程"><a href="#正规方程" class="headerlink" title="正规方程"></a>正规方程</h3><h3 id="调用sklearn封装好的模型"><a href="#调用sklearn封装好的模型" class="headerlink" title="调用sklearn封装好的模型"></a>调用sklearn封装好的模型</h3><h1 id="扩展"><a href="#扩展" class="headerlink" title="扩展"></a>扩展</h1><h2 id="使用kNN回归器实现回归"><a href="#使用kNN回归器实现回归" class="headerlink" title="使用kNN回归器实现回归"></a>使用kNN回归器实现回归</h2><h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><h2 id><a href="#" class="headerlink" title=" "></a> </h2><h1 id="-1"><a href="#-1" class="headerlink" title=" "></a> </h1>
     </div>
 
     
@@ -349,7 +383,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线性回归算法介绍"><span class="nav-number">1.</span> <span class="nav-text">线性回归算法介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是线性回归"><span class="nav-number">1.1.</span> <span class="nav-text">什么是线性回归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性回归算法的特点"><span class="nav-number">1.2.</span> <span class="nav-text">线性回归算法的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性回归算法的流程"><span class="nav-number">1.3.</span> <span class="nav-text">线性回归算法的流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回归问题与分类问题的区别"><span class="nav-number">1.4.</span> <span class="nav-text">回归问题与分类问题的区别</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线性回归算法实现"><span class="nav-number">2.</span> <span class="nav-text">线性回归算法实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单线性回归算法"><span class="nav-number">2.1.</span> <span class="nav-text">简单线性回归算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单线性回归算法的实现思路"><span class="nav-number">2.1.1.</span> <span class="nav-text">简单线性回归算法的实现思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单例子实现简单线性回归算法"><span class="nav-number">2.1.2.</span> <span class="nav-text">简单例子实现简单线性回归算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用向量化方法实现"><span class="nav-number">2.1.3.</span> <span class="nav-text">使用向量化方法实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#效率比较"><span class="nav-number">2.1.4.</span> <span class="nav-text">效率比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性回归评价指标"><span class="nav-number">2.2.</span> <span class="nav-text">线性回归评价指标</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MSE、MAE、RMSE"><span class="nav-number">2.2.1.</span> <span class="nav-text">MSE、MAE、RMSE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#R-Squared"><span class="nav-number">2.2.2.</span> <span class="nav-text">R Squared</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多元线性回归模型"><span class="nav-number">2.3.</span> <span class="nav-text">多元线性回归模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#正规方程"><span class="nav-number">2.3.1.</span> <span class="nav-text">正规方程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调用sklearn封装好的模型"><span class="nav-number">2.3.2.</span> <span class="nav-text">调用sklearn封装好的模型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#扩展"><span class="nav-number">3.</span> <span class="nav-text">扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用kNN回归器实现回归"><span class="nav-number">3.1.</span> <span class="nav-text">使用kNN回归器实现回归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">3.2.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">3.3.</span> <span class="nav-text"> </span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#-1"><span class="nav-number">4.</span> <span class="nav-text"> </span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#线性回归算法介绍"><span class="nav-number">1.</span> <span class="nav-text">线性回归算法介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是线性回归"><span class="nav-number">1.1.</span> <span class="nav-text">什么是线性回归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性回归算法的特点"><span class="nav-number">1.2.</span> <span class="nav-text">线性回归算法的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单线性回归的目标及解决问题的一般思路"><span class="nav-number">1.3.</span> <span class="nav-text">简单线性回归的目标及解决问题的一般思路</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#线性回归算法实现"><span class="nav-number">2.</span> <span class="nav-text">线性回归算法实现</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单线性回归算法"><span class="nav-number">2.1.</span> <span class="nav-text">简单线性回归算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单线性回归算法的实现思路"><span class="nav-number">2.1.1.</span> <span class="nav-text">简单线性回归算法的实现思路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#简单例子实现简单线性回归算法"><span class="nav-number">2.1.2.</span> <span class="nav-text">简单例子实现简单线性回归算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用向量化方法实现"><span class="nav-number">2.1.3.</span> <span class="nav-text">使用向量化方法实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#效率比较"><span class="nav-number">2.1.4.</span> <span class="nav-text">效率比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性回归评价指标"><span class="nav-number">2.2.</span> <span class="nav-text">线性回归评价指标</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MSE、MAE、RMSE"><span class="nav-number">2.2.1.</span> <span class="nav-text">MSE、MAE、RMSE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#R-Squared"><span class="nav-number">2.2.2.</span> <span class="nav-text">R Squared</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多元线性回归模型"><span class="nav-number">2.3.</span> <span class="nav-text">多元线性回归模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#正规方程"><span class="nav-number">2.3.1.</span> <span class="nav-text">正规方程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调用sklearn封装好的模型"><span class="nav-number">2.3.2.</span> <span class="nav-text">调用sklearn封装好的模型</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#扩展"><span class="nav-number">3.</span> <span class="nav-text">扩展</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用kNN回归器实现回归"><span class="nav-number">3.1.</span> <span class="nav-text">使用kNN回归器实现回归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">3.2.</span> <span class="nav-text">小结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">3.3.</span> <span class="nav-text"> </span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#-1"><span class="nav-number">4.</span> <span class="nav-text"> </span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -430,7 +464,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共6.5k字</span>
+  <span class="post-count">博客全站共7.3k字</span>
 </div>
         
 <div class="busuanzi-count">
