@@ -28,7 +28,7 @@
 <meta property="og:description" content="华为实习项目学习基础知识　　部门使用Ruby脚本语言进行开发，熟悉Ruby语言的语法知识，函数、模块、类等概念。为了熟悉Ruby语言，导师安排我做了两个小工具练手，即下面所述的跨平台FTP服务器和测试报告写入工具。做完两个小工具后，参与到部门仪表测试组件开发的项目中，为此，学习了SDH协议。下面，简单对SDH协议的内容做一个简单的归纳，来总结一下所学知识。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-04-24T14:10:04.000Z">
-<meta property="article:modified_time" content="2020-04-24T15:33:38.135Z">
+<meta property="article:modified_time" content="2020-05-06T17:02:06.735Z">
 <meta property="article:author" content="缘溪行">
 <meta property="article:tag" content="总结">
 <meta name="twitter:card" content="summary">
@@ -207,10 +207,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-04-24 22:10:04 / 修改时间：23:33:38" itemprop="dateCreated datePublished" datetime="2020-04-24T22:10:04+08:00">2020-04-24</time>
+              <time title="创建时间：2020-04-24 22:10:04" itemprop="dateCreated datePublished" datetime="2020-04-24T22:10:04+08:00">2020-04-24</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-07 01:02:06" itemprop="dateModified" datetime="2020-05-07T01:02:06+08:00">2020-05-07</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -256,7 +262,11 @@
 <h3 id="仪表测试组件开发"><a href="#仪表测试组件开发" class="headerlink" title="仪表测试组件开发"></a>仪表测试组件开发</h3><p>主要工作：参与仪表支撑重构。</p>
 <p>核心思想：测试从硬件厂商买过来的各种设备，并给我们一个显示硬件状态的图形化界面。我们用telnet连接硬件，并给硬件发送指令，来测试硬件是否正常响应。将此过程自动化。</p>
 <p>印象最深的优化：在重构代码的过程中，发现原来的代码对统一接口进行不同操作（如发送数据，下插告警等）时，都要重新进行telnet连接，效率很低。解决方法：将每个连接设置为一个单例，确保每个端口只有一个连接。</p>
-<h1 id="毕业设计项目"><a href="#毕业设计项目" class="headerlink" title="毕业设计项目"></a>毕业设计项目</h1><p>待更新</p>
+<h1 id="毕业设计项目"><a href="#毕业设计项目" class="headerlink" title="毕业设计项目"></a>毕业设计项目</h1><p>　　到２０２０年5月7日为止，我已经完成了毕业设计的所有内容，这一路走来，还是经历了许多，也学到了许多。下面就总结一下，我在这过程中学到的东西吧。</p>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>　　这次毕设的题目是：基于关联性系数的<strong>特征选择算法</strong>的设计与实现。咋一看题目，会认为这次毕设的主要工作量在<strong>特征选择算法</strong>，但实际上，其重点是在算法的具体应用上。</p>
+<h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><p>　　这个项目，实现起来并不难。首先，对三种特征选择算法进行了实现，即Pearson相关系数、Spearman等级相关系数和Kendall等级相关系数。这三种和统计学相关的系数早就被封装在python中的<code>scipy</code>包中了，可以直接进行调用。通过阅读维基百科中关于三种相关系数的定义，我首先尝试用定义直接进行代码实现，事实上，在小规模的数据的测试上，能很快获取正确的结果。</p>
+<p>　　实现算法后，导师雷晏让我把算法运用到软件缺陷定位中。这个和软件缺陷定位的数据集，数据量有多有少。其中，还不乏数据中的编码、格式等不一致，也存在数据冗余的问题。在读取数据，并对数据进行相应的处理后，将规范化的数据交给前面实现的算法。虽然能获取正确的结果，但是Kendall等级相关系数在大规模的数据量时，效率极低。</p>
+<p>　　重新仔细阅读维基百科，通过维基百科找到相应的文献，才找到计算Kendall等级相关系数的奥妙之处。这里需要计算将数组排序需要交换元素的次数。文献中指出，可以通过归并排序，求出这个次数。给我最深的感悟是：归并排序实现起来很简单，如果不想自己实现，在python中也可以直接调包进行排序，但是，在这种具体的场景下，我却不知道如何运用这种算法来求出需要交换的次数。学习算法固然重要，但是活学活用可能更重要。通过文献中指出的方法，我成功提高了算法的效率，这使我倍感兴奋。</p>
 <h1 id="即约微信小程序开发项目"><a href="#即约微信小程序开发项目" class="headerlink" title="即约微信小程序开发项目"></a>即约微信小程序开发项目</h1><p>待更新</p>
 <h1 id="招聘网站数据挖掘与分析项目"><a href="#招聘网站数据挖掘与分析项目" class="headerlink" title="招聘网站数据挖掘与分析项目"></a>招聘网站数据挖掘与分析项目</h1><p>待更新</p>
 
@@ -360,7 +370,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#华为实习项目"><span class="nav-number">1.</span> <span class="nav-text">华为实习项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#学习基础知识"><span class="nav-number">1.1.</span> <span class="nav-text">学习基础知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#所做内容"><span class="nav-number">1.2.</span> <span class="nav-text">所做内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#跨平台FTP服务器"><span class="nav-number">1.2.1.</span> <span class="nav-text">跨平台FTP服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试报告写入工具"><span class="nav-number">1.2.2.</span> <span class="nav-text">测试报告写入工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#仪表测试组件开发"><span class="nav-number">1.2.3.</span> <span class="nav-text">仪表测试组件开发</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#毕业设计项目"><span class="nav-number">2.</span> <span class="nav-text">毕业设计项目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#即约微信小程序开发项目"><span class="nav-number">3.</span> <span class="nav-text">即约微信小程序开发项目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#招聘网站数据挖掘与分析项目"><span class="nav-number">4.</span> <span class="nav-text">招聘网站数据挖掘与分析项目</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#华为实习项目"><span class="nav-number">1.</span> <span class="nav-text">华为实习项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#学习基础知识"><span class="nav-number">1.1.</span> <span class="nav-text">学习基础知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#所做内容"><span class="nav-number">1.2.</span> <span class="nav-text">所做内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#跨平台FTP服务器"><span class="nav-number">1.2.1.</span> <span class="nav-text">跨平台FTP服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试报告写入工具"><span class="nav-number">1.2.2.</span> <span class="nav-text">测试报告写入工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#仪表测试组件开发"><span class="nav-number">1.2.3.</span> <span class="nav-text">仪表测试组件开发</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#毕业设计项目"><span class="nav-number">2.</span> <span class="nav-text">毕业设计项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目"><span class="nav-number">2.1.</span> <span class="nav-text">题目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#流程"><span class="nav-number">2.2.</span> <span class="nav-text">流程</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#即约微信小程序开发项目"><span class="nav-number">3.</span> <span class="nav-text">即约微信小程序开发项目</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#招聘网站数据挖掘与分析项目"><span class="nav-number">4.</span> <span class="nav-text">招聘网站数据挖掘与分析项目</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -441,7 +451,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共8k字</span>
+  <span class="post-count">博客全站共9.5k字</span>
 </div>
         
 <div class="busuanzi-count">
