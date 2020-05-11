@@ -344,10 +344,14 @@
 <h2 id="改变学习率"><a href="#改变学习率" class="headerlink" title="改变学习率"></a>改变学习率</h2><p>在第一章中，我们说了，学习率太大或太小，都会造成一定的问题，下面我们尝试改变学习率，来看看具体情况如何吧。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">eta=<span class="number">0.01</span></span><br><span class="line"><span class="comment"># 后续代码和前面一致</span></span><br></pre></td></tr></table></figure>
 <p><img src="/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/梯度下降可视化-学习率小的情况.png" alt></p>
+<p>由于将学习率设为0.01，导致梯度下降过程很缓慢，在图中，可由每次下降的红点位置确定，红点越密集，表明下降的步长很小。</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">eta = <span class="number">0.8</span></span><br><span class="line"><span class="comment"># 后续代码和前面一致</span></span><br></pre></td></tr></table></figure>
 <p><img src="/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/梯度下降可视化-学习率偏大的情况.png" alt></p>
-<p>后续内容待更新</p>
-<h1 id="线性回归中的梯度下降法"><a href="#线性回归中的梯度下降法" class="headerlink" title="线性回归中的梯度下降法"></a>线性回归中的梯度下降法</h1><h1 id="随机梯度下降法"><a href="#随机梯度下降法" class="headerlink" title="随机梯度下降法"></a>随机梯度下降法</h1><h1 id="封装我们的SGD算法并测试"><a href="#封装我们的SGD算法并测试" class="headerlink" title="封装我们的SGD算法并测试"></a>封装我们的SGD算法并测试</h1><h1 id="梯度下降法计算的准确性和调试"><a href="#梯度下降法计算的准确性和调试" class="headerlink" title="梯度下降法计算的准确性和调试"></a>梯度下降法计算的准确性和调试</h1><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1>]]></content>
+<p>将学习率设为0.8时，梯度下降过程虽然取得了正确的结果，但是，由于学习率不是合适的情况，导致下降过程出现上图的折线情况。那如果将学习率设置得更大呢？具体代码这里先不给出，直接给出学习率太大时，会导致的情况。</p>
+<p><img src="/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/梯度下降可视化-不收敛的情况.png" alt></p>
+<p>由上图可知，学习率太大，可能会导致不收敛！</p>
+<h1 id="线性回归中的梯度下降法"><a href="#线性回归中的梯度下降法" class="headerlink" title="线性回归中的梯度下降法"></a>线性回归中的梯度下降法</h1><p>待更新</p>
+<h1 id="随机梯度下降法"><a href="#随机梯度下降法" class="headerlink" title="随机梯度下降法"></a>随机梯度下降法</h1><h1 id="封装我们的SGD算法并测试"><a href="#封装我们的SGD算法并测试" class="headerlink" title="封装我们的SGD算法并测试"></a>封装我们的SGD算法并测试</h1><h1 id="梯度下降法计算的准确性和调试"><a href="#梯度下降法计算的准确性和调试" class="headerlink" title="梯度下降法计算的准确性和调试"></a>梯度下降法计算的准确性和调试</h1><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1>]]></content>
       <categories>
         <category>机器学习</category>
       </categories>
