@@ -298,7 +298,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-12 22:21:48" itemprop="dateModified" datetime="2020-05-12T22:21:48+08:00">2020-05-12</time>
+                <time title="修改时间：2020-05-12 22:23:11" itemprop="dateModified" datetime="2020-05-12T22:23:11+08:00">2020-05-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -322,101 +322,14 @@
 
       
           <h1 id="计算机组成"><a href="#计算机组成" class="headerlink" title="计算机组成"></a>计算机组成</h1><h2 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h2><h3 id="计算机系统的三大总线"><a href="#计算机系统的三大总线" class="headerlink" title="计算机系统的三大总线"></a>计算机系统的三大总线</h3><p>数据总线、地址总线、控制总线</p>
-<h3 id="计算机的主要结构组件"><a href="#计算机的主要结构组件" class="headerlink" title="计算机的主要结构组件"></a>计算机的主要结构组件</h3><ul>
-<li>CPU<ul>
-<li>控制单元</li>
-<li>算术逻辑单元</li>
-<li>寄存器</li>
-<li>CPU内部互连</li>
-</ul>
-</li>
-<li>主存储器</li>
-<li>输入和输出</li>
-<li>系统互连</li>
-</ul>
-<h3 id="存储器层次结构的原理"><a href="#存储器层次结构的原理" class="headerlink" title="存储器层次结构的原理"></a>存储器层次结构的原理</h3><p>局部性原理：处理器倾向于成块地访问存储器中的指令和数据</p>
-<h3 id="冯洛伊曼结构的概念"><a href="#冯洛伊曼结构的概念" class="headerlink" title="冯洛伊曼结构的概念"></a>冯洛伊曼结构的概念</h3><p>三条主要内容：</p>
-<ul>
-<li>数据和指令存储在单一的存储器中</li>
-<li>存储器的内容通过位置寻址，而不关心存储在其中的数据类型</li>
-<li>以顺序的形式从一条指令到下一条指令执行</li>
-</ul>
-<h3 id="数据单元的存取方法"><a href="#数据单元的存取方法" class="headerlink" title="数据单元的存取方法"></a>数据单元的存取方法</h3><ul>
-<li>顺序存取：磁带</li>
-<li>直接存取：磁盘</li>
-<li>随机存取：主存</li>
-<li>关联存取：cache</li>
-</ul>
-<h2 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h2><h3 id="Cache的映射功能"><a href="#Cache的映射功能" class="headerlink" title="Cache的映射功能"></a>Cache的映射功能</h3><ul>
-<li>直接映射</li>
-<li>全相联映射</li>
-<li>组相联映射</li>
-</ul>
-<h3 id="Cache的替换算法"><a href="#Cache的替换算法" class="headerlink" title="Cache的替换算法"></a>Cache的替换算法</h3><ul>
-<li>LRU：最近最少使用</li>
-<li>LFU：最近最不经常使用</li>
-<li>FIFO：先进先出</li>
-<li>随便替换：这个技术性能上，还不错。</li>
-</ul>
-<h3 id="Cache的写策略"><a href="#Cache的写策略" class="headerlink" title="Cache的写策略"></a>Cache的写策略</h3><ul>
-<li>写回法</li>
-<li>写直达</li>
-</ul>
-<h2 id="I-O"><a href="#I-O" class="headerlink" title="I/O"></a>I/O</h2><h3 id="I-O编址方式"><a href="#I-O编址方式" class="headerlink" title="I/O编址方式"></a>I/O编址方式</h3><ul>
-<li>存储器映射式</li>
-<li>分离式</li>
-</ul>
-<h3 id="I-O中断设计问题"><a href="#I-O中断设计问题" class="headerlink" title="I/O中断设计问题"></a>I/O中断设计问题</h3><ul>
-<li>软件轮询：费时，但成本低</li>
-<li>硬件轮询：菊花链电路</li>
-<li>总线仲裁</li>
-</ul>
-<h3 id="DMA技术"><a href="#DMA技术" class="headerlink" title="DMA技术"></a>DMA技术</h3><p>DMA：直接存储器存取Direct Memeory Access</p>
-<p>直观上说：就是CPU将读取数据相关的信息发给DMA，然后DMA接手传输数据，传输完成后，给CPU一个中断信号，CPU开始处理。总结来说，就是CPU只在数据传输的开始和结束时参与。</p>
-<h2 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h2><h3 id="CPU的任务"><a href="#CPU的任务" class="headerlink" title="CPU的任务"></a>CPU的任务</h3><ul>
-<li>取指令</li>
-<li>解释指令</li>
-<li>取数据</li>
-<li>处理数据</li>
-<li>写数据</li>
-</ul>
-<h3 id="流水线"><a href="#流水线" class="headerlink" title="流水线"></a>流水线</h3><p>基于CPU的指令周期：取值、执行</p>
-<h2 id="指令集"><a href="#指令集" class="headerlink" title="指令集"></a>指令集</h2><h3 id="寻址方式"><a href="#寻址方式" class="headerlink" title="寻址方式"></a>寻址方式</h3><ul>
-<li>立即数寻址</li>
-<li>直接寻址</li>
-<li>间接寻址</li>
-<li>寄存器寻址</li>
-<li>寄存器简介寻址</li>
-<li>偏移寻址<ul>
-<li>相对寻址</li>
-<li>基址寄存器寻址</li>
-<li>变址</li>
-</ul>
-</li>
-</ul>
-<h3 id="指令级并行性和超标量处理器"><a href="#指令级并行性和超标量处理器" class="headerlink" title="指令级并行性和超标量处理器"></a>指令级并行性和超标量处理器</h3><p>指令级并行性指：程序中的指令可以并行执行</p>
-<p>超标量处理器：使用多条相互独立的流水线的处理器</p>
-<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h2 id="数组和链表的区别"><a href="#数组和链表的区别" class="headerlink" title="数组和链表的区别"></a>数组和链表的区别</h2><ol>
-<li>数组固定长度，链表长度可变</li>
-<li>数组可通过下标随机访问，链表需要根据下标对链表进行遍历</li>
-<li>数组插入操作不方便</li>
-</ol>
-<h2 id="逻辑结构和物理结构"><a href="#逻辑结构和物理结构" class="headerlink" title="逻辑结构和物理结构"></a>逻辑结构和物理结构</h2><p>逻辑结构：</p>
-<ul>
-<li>线性结构</li>
-<li>树形结构</li>
-<li>图形结构</li>
-<li>集合</li>
-</ul>
-<p>物理结构</p>
-<ul>
-<li>顺序存储</li>
-<li>链式存储</li>
-<li>索引</li>
-<li>散列</li>
-</ul>
-<h2 id="头指针和头节点"><a href="#头指针和头节点" class="headerlink" title="头指针和头节点"></a>头指针和头节点</h2><p>头指针具有标识作用，头节点是虚拟节点</p>
-<h2 id="邻接矩阵和邻接表"><a href="#邻接矩阵和邻接表" class="headerlink" title="邻接矩阵和邻接表"></a>邻接矩阵和邻接表</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/05/05/%E5%A4%8D%E8%AF%95%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98%E5%87%86%E5%A4%87/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

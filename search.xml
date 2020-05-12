@@ -610,6 +610,7 @@ You should consider upgrading via the &#39;python -m pip install --upgrade pip&#
     <title>复试专业课面试准备</title>
     <url>/2020/05/05/%E5%A4%8D%E8%AF%95%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98%E5%87%86%E5%A4%87/</url>
     <content><![CDATA[<h1 id="计算机组成"><a href="#计算机组成" class="headerlink" title="计算机组成"></a>计算机组成</h1><h2 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h2><h3 id="计算机系统的三大总线"><a href="#计算机系统的三大总线" class="headerlink" title="计算机系统的三大总线"></a>计算机系统的三大总线</h3><p>数据总线、地址总线、控制总线</p>
+<a id="more"></a>
 <h3 id="计算机的主要结构组件"><a href="#计算机的主要结构组件" class="headerlink" title="计算机的主要结构组件"></a>计算机的主要结构组件</h3><ul>
 <li>CPU<ul>
 <li>控制单元</li>
