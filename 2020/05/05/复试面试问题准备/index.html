@@ -20,33 +20,20 @@
     var CONFIG = {"hostname":"xie-huan.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="本文主要内容如何利用scrapy这个框架来完成一个简单的爬虫项目并用pycharm等IDE来进行调试呢？">
+  <meta name="description" content="计算机组成综述计算机系统的三大总线数据总线、地址总线、控制总线 计算机的主要结构组件 CPU 控制单元 算术逻辑单元 寄存器 CPU内部互连   主存储器 输入和输出 系统互连  存储器层次结构的原理局部性原理：处理器倾向于成块地访问存储器中的指令和数据 冯洛伊曼结构的概念三条主要内容：  数据和指令存储在单一的存储器中 存储器的内容通过位置寻址，而不关心存储在其中的数据类型 以顺序的形式从一条指">
 <meta property="og:type" content="article">
-<meta property="og:title" content="利用Srapy框架创建初始Python爬虫项目">
-<meta property="og:url" content="https://xie-huan.github.io/2018/03/04/%E5%88%A9%E7%94%A8Srapy%E6%A1%86%E6%9E%B6%E5%88%9B%E5%BB%BA%E5%88%9D%E5%A7%8BPython%E7%88%AC%E8%99%AB%E9%A1%B9%E7%9B%AE/index.html">
+<meta property="og:title" content="复试专业课面试准备">
+<meta property="og:url" content="https://xie-huan.github.io/2020/05/05/%E5%A4%8D%E8%AF%95%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98%E5%87%86%E5%A4%87/index.html">
 <meta property="og:site_name" content="缘溪行">
-<meta property="og:description" content="本文主要内容如何利用scrapy这个框架来完成一个简单的爬虫项目并用pycharm等IDE来进行调试呢？">
+<meta property="og:description" content="计算机组成综述计算机系统的三大总线数据总线、地址总线、控制总线 计算机的主要结构组件 CPU 控制单元 算术逻辑单元 寄存器 CPU内部互连   主存储器 输入和输出 系统互连  存储器层次结构的原理局部性原理：处理器倾向于成块地访问存储器中的指令和数据 冯洛伊曼结构的概念三条主要内容：  数据和指令存储在单一的存储器中 存储器的内容通过位置寻址，而不关心存储在其中的数据类型 以顺序的形式从一条指">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTcwNjMyNjQ5?x-oss-process=image/format,png">
-<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTcxMTQyNzM4?x-oss-process=image/format,png">
-<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTgwOTQyNTk?x-oss-process=image/format,png">
-<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTgwODU4Mzg4?x-oss-process=image/format,png">
-<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTcyOTA2Mjg?x-oss-process=image/format,png">
-<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTc1MjU5MjI3?x-oss-process=image/format,png">
-<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTc1OTQ1MTU4?x-oss-process=image/format,png">
-<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTgwMTIyMjMw?x-oss-process=image/format,png">
-<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTgwMjM3NTI1?x-oss-process=image/format,png">
-<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTc1NTAwNTE1?x-oss-process=image/format,png">
-<meta property="og:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTgyMjQzMzMy?x-oss-process=image/format,png">
-<meta property="article:published_time" content="2018-03-04T01:59:52.000Z">
-<meta property="article:modified_time" content="2020-05-09T02:41:12.537Z">
+<meta property="article:published_time" content="2020-05-05T01:24:17.000Z">
+<meta property="article:modified_time" content="2020-05-12T14:21:48.115Z">
 <meta property="article:author" content="缘溪行">
-<meta property="article:tag" content="Python">
-<meta property="article:tag" content="Scrapy">
+<meta property="article:tag" content="经验分享">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTcwNjMyNjQ5?x-oss-process=image/format,png">
 
-<link rel="canonical" href="https://xie-huan.github.io/2018/03/04/%E5%88%A9%E7%94%A8Srapy%E6%A1%86%E6%9E%B6%E5%88%9B%E5%BB%BA%E5%88%9D%E5%A7%8BPython%E7%88%AC%E8%99%AB%E9%A1%B9%E7%9B%AE/">
+<link rel="canonical" href="https://xie-huan.github.io/2020/05/05/%E5%A4%8D%E8%AF%95%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98%E5%87%86%E5%A4%87/">
 
 
 <script id="page-configurations">
@@ -59,7 +46,7 @@
   };
 </script>
 
-  <title>利用Srapy框架创建初始Python爬虫项目 | 缘溪行</title>
+  <title>复试专业课面试准备 | 缘溪行</title>
   
 
 
@@ -198,7 +185,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://xie-huan.github.io/2018/03/04/%E5%88%A9%E7%94%A8Srapy%E6%A1%86%E6%9E%B6%E5%88%9B%E5%BB%BA%E5%88%9D%E5%A7%8BPython%E7%88%AC%E8%99%AB%E9%A1%B9%E7%9B%AE/">
+    <link itemprop="mainEntityOfPage" href="https://xie-huan.github.io/2020/05/05/%E5%A4%8D%E8%AF%95%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98%E5%87%86%E5%A4%87/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head_pro.png">
@@ -211,7 +198,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          利用Srapy框架创建初始Python爬虫项目
+          复试专业课面试准备
         </h1>
 
         <div class="post-meta">
@@ -221,14 +208,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2018-03-04 09:59:52" itemprop="dateCreated datePublished" datetime="2018-03-04T09:59:52+08:00">2018-03-04</time>
+              <time title="创建时间：2020-05-05 09:24:17" itemprop="dateCreated datePublished" datetime="2020-05-05T09:24:17+08:00">2020-05-05</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-09 10:41:12" itemprop="dateModified" datetime="2020-05-09T10:41:12+08:00">2020-05-09</time>
+                <time title="修改时间：2020-05-12 22:21:48" itemprop="dateModified" datetime="2020-05-12T22:21:48+08:00">2020-05-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -236,7 +223,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Python%E7%88%AC%E8%99%AB/" itemprop="url" rel="index"><span itemprop="name">Python爬虫</span></a>
+                  <a href="/categories/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" itemprop="url" rel="index"><span itemprop="name">经验分享</span></a>
                 </span>
             </span>
 
@@ -258,24 +245,102 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="本文主要内容"><a href="#本文主要内容" class="headerlink" title="本文主要内容"></a>本文主要内容</h1><p>如何利用scrapy这个框架来完成一个简单的爬虫项目并用pycharm等IDE来进行调试呢？</p>
-<a id="more"></a>
-<h1 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h1><h2 id="虚拟环境搭建"><a href="#虚拟环境搭建" class="headerlink" title="虚拟环境搭建"></a>虚拟环境搭建</h2><p>首先要搭建虚拟环境，不懂虚拟环境搭建的详细步骤可参见另一篇博客：<a href="https://xie-huan.github.io/2017/11/06/Python虚拟环境的搭建与配置（详细图文过程介绍）/">虚拟环境搭建</a><br>搭建完成虚拟环境过后，我们新建一个针对于此项目的虚拟环境，我们要使用Python3来创建虚拟环境（博主用的virtualenv wrapper，则虚拟环境放在E:/Envs这个文件夹中），我们给虚拟环境取名为virtual-test，等待虚拟环境创建完成。<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTcwNjMyNjQ5?x-oss-process=image/format,png" alt="这里写图片描述"></p>
-<h2 id="Srapy框架安装"><a href="#Srapy框架安装" class="headerlink" title="Srapy框架安装"></a>Srapy框架安装</h2><p>然后我们需要安装scrapy框架：<br>        进入刚刚搭建的虚拟环境，执行<strong>pip install scrapy</strong>命令，等待执行完成。<br>如果觉得下载速度过慢，可使用豆瓣源来安装：<strong>pip install -i <a href="https://pypi.douban.com/simple/" target="_blank" rel="noopener">https://pypi.douban.com/simple/</a> scrapy</strong>，执行并等待其安装完成<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTcxMTQyNzM4?x-oss-process=image/format,png" alt="这里写图片描述"></p>
-<h2 id="新建Scrapy项目"><a href="#新建Scrapy项目" class="headerlink" title="新建Scrapy项目"></a>新建Scrapy项目</h2><p>安装完scrapy框架后，进入项目存放的文件夹（博主在这里新建了一个文件夹，叫做project-test文件夹），使用命令<strong>scrapy startproject SpiderTest</strong>，这里的   SpiderTest是项目文件名（注意，这个项目文件名不能有连字符这样的符号，只能是字母，数字和下划线，且开头为字母）。创建好项目后，根据下面的提示信息，首先进入SpiderTest项目文件，然后输入命令<strong>scrapy genspider jobbole jobbole.com</strong>，这里jobbole是其中的.py文件名，jobbole.com是要爬取的网站的域名。<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTgwOTQyNTk?x-oss-process=image/format,png" alt="这里写图片描述"><br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTgwODU4Mzg4?x-oss-process=image/format,png" alt="这里写图片描述"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">注意：如果是windows，则还需继续执行一条命令：</span><br><span class="line">pip install -i https:&#x2F;&#x2F;pypi.douban.com&#x2F;simple pypiwin32</span><br><span class="line">防止后续调试出现错误。</span><br></pre></td></tr></table></figure>
-<p>好了，现在我们的项目就基本创建成功，现在我们用pycharm来配置和调试一下这个令人激动的项目的开端吧。</p>
-<h2 id="使用Pycharm开启项目"><a href="#使用Pycharm开启项目" class="headerlink" title="使用Pycharm开启项目"></a>使用Pycharm开启项目</h2><ol>
-<li><p>打开pycharm，在菜单栏找到File-Open<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTcyOTA2Mjg?x-oss-process=image/format,png" alt="这里写图片描述"></p>
+        <h1 id="计算机组成"><a href="#计算机组成" class="headerlink" title="计算机组成"></a>计算机组成</h1><h2 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h2><h3 id="计算机系统的三大总线"><a href="#计算机系统的三大总线" class="headerlink" title="计算机系统的三大总线"></a>计算机系统的三大总线</h3><p>数据总线、地址总线、控制总线</p>
+<h3 id="计算机的主要结构组件"><a href="#计算机的主要结构组件" class="headerlink" title="计算机的主要结构组件"></a>计算机的主要结构组件</h3><ul>
+<li>CPU<ul>
+<li>控制单元</li>
+<li>算术逻辑单元</li>
+<li>寄存器</li>
+<li>CPU内部互连</li>
+</ul>
 </li>
-<li><p>找到项目存放地点，点击OK<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTc1MjU5MjI3?x-oss-process=image/format,png" alt="这里写图片描述"><br>3.在菜单栏里面找到File-Settings，在搜索栏里输入interpreter，在右侧的project interpreter中选择刚刚创建的虚拟环境，点击OK。<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTc1OTQ1MTU4?x-oss-process=image/format,png" alt="这里写图片描述"><br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTgwMTIyMjMw?x-oss-process=image/format,png" alt="这里写图片描述"><br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTgwMjM3NTI1?x-oss-process=image/format,png" alt="这里写图片描述"><br>4.在项目中（SpiderTest）新建一个Python File 来执行我们的调试过程，文件名为main.py。（注意这里博主新建main文件的位置错误，应当在SpiderTest 中新建，而不是在项目存放文件夹中新建）<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTc1NTAwNTE1?x-oss-process=image/format,png" alt="这里写图片描述"></p>
+<li>主存储器</li>
+<li>输入和输出</li>
+<li>系统互连</li>
+</ul>
+<h3 id="存储器层次结构的原理"><a href="#存储器层次结构的原理" class="headerlink" title="存储器层次结构的原理"></a>存储器层次结构的原理</h3><p>局部性原理：处理器倾向于成块地访问存储器中的指令和数据</p>
+<h3 id="冯洛伊曼结构的概念"><a href="#冯洛伊曼结构的概念" class="headerlink" title="冯洛伊曼结构的概念"></a>冯洛伊曼结构的概念</h3><p>三条主要内容：</p>
+<ul>
+<li>数据和指令存储在单一的存储器中</li>
+<li>存储器的内容通过位置寻址，而不关心存储在其中的数据类型</li>
+<li>以顺序的形式从一条指令到下一条指令执行</li>
+</ul>
+<h3 id="数据单元的存取方法"><a href="#数据单元的存取方法" class="headerlink" title="数据单元的存取方法"></a>数据单元的存取方法</h3><ul>
+<li>顺序存取：磁带</li>
+<li>直接存取：磁盘</li>
+<li>随机存取：主存</li>
+<li>关联存取：cache</li>
+</ul>
+<h2 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h2><h3 id="Cache的映射功能"><a href="#Cache的映射功能" class="headerlink" title="Cache的映射功能"></a>Cache的映射功能</h3><ul>
+<li>直接映射</li>
+<li>全相联映射</li>
+<li>组相联映射</li>
+</ul>
+<h3 id="Cache的替换算法"><a href="#Cache的替换算法" class="headerlink" title="Cache的替换算法"></a>Cache的替换算法</h3><ul>
+<li>LRU：最近最少使用</li>
+<li>LFU：最近最不经常使用</li>
+<li>FIFO：先进先出</li>
+<li>随便替换：这个技术性能上，还不错。</li>
+</ul>
+<h3 id="Cache的写策略"><a href="#Cache的写策略" class="headerlink" title="Cache的写策略"></a>Cache的写策略</h3><ul>
+<li>写回法</li>
+<li>写直达</li>
+</ul>
+<h2 id="I-O"><a href="#I-O" class="headerlink" title="I/O"></a>I/O</h2><h3 id="I-O编址方式"><a href="#I-O编址方式" class="headerlink" title="I/O编址方式"></a>I/O编址方式</h3><ul>
+<li>存储器映射式</li>
+<li>分离式</li>
+</ul>
+<h3 id="I-O中断设计问题"><a href="#I-O中断设计问题" class="headerlink" title="I/O中断设计问题"></a>I/O中断设计问题</h3><ul>
+<li>软件轮询：费时，但成本低</li>
+<li>硬件轮询：菊花链电路</li>
+<li>总线仲裁</li>
+</ul>
+<h3 id="DMA技术"><a href="#DMA技术" class="headerlink" title="DMA技术"></a>DMA技术</h3><p>DMA：直接存储器存取Direct Memeory Access</p>
+<p>直观上说：就是CPU将读取数据相关的信息发给DMA，然后DMA接手传输数据，传输完成后，给CPU一个中断信号，CPU开始处理。总结来说，就是CPU只在数据传输的开始和结束时参与。</p>
+<h2 id="CPU"><a href="#CPU" class="headerlink" title="CPU"></a>CPU</h2><h3 id="CPU的任务"><a href="#CPU的任务" class="headerlink" title="CPU的任务"></a>CPU的任务</h3><ul>
+<li>取指令</li>
+<li>解释指令</li>
+<li>取数据</li>
+<li>处理数据</li>
+<li>写数据</li>
+</ul>
+<h3 id="流水线"><a href="#流水线" class="headerlink" title="流水线"></a>流水线</h3><p>基于CPU的指令周期：取值、执行</p>
+<h2 id="指令集"><a href="#指令集" class="headerlink" title="指令集"></a>指令集</h2><h3 id="寻址方式"><a href="#寻址方式" class="headerlink" title="寻址方式"></a>寻址方式</h3><ul>
+<li>立即数寻址</li>
+<li>直接寻址</li>
+<li>间接寻址</li>
+<li>寄存器寻址</li>
+<li>寄存器简介寻址</li>
+<li>偏移寻址<ul>
+<li>相对寻址</li>
+<li>基址寄存器寻址</li>
+<li>变址</li>
+</ul>
 </li>
+</ul>
+<h3 id="指令级并行性和超标量处理器"><a href="#指令级并行性和超标量处理器" class="headerlink" title="指令级并行性和超标量处理器"></a>指令级并行性和超标量处理器</h3><p>指令级并行性指：程序中的指令可以并行执行</p>
+<p>超标量处理器：使用多条相互独立的流水线的处理器</p>
+<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h2 id="数组和链表的区别"><a href="#数组和链表的区别" class="headerlink" title="数组和链表的区别"></a>数组和链表的区别</h2><ol>
+<li>数组固定长度，链表长度可变</li>
+<li>数组可通过下标随机访问，链表需要根据下标对链表进行遍历</li>
+<li>数组插入操作不方便</li>
 </ol>
-<p> 在main.py中输入如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from scrapy.cmdline import execute</span><br><span class="line">import os</span><br><span class="line">import sys</span><br><span class="line"></span><br><span class="line">#得到main文件的路径</span><br><span class="line">sys.path.append(os.path.dirname(os.path.abspath(__file__)))</span><br><span class="line">#执行命令scrapy crawl jobbole</span><br><span class="line">execute([&#39;scrapy&#39;, &#39;crawl&#39;, &#39;jobbole&#39;])</span><br></pre></td></tr></table></figure>
-<p>点击调试：<br><img src="https://imgconvert.csdnimg.cn/aHR0cDovL2ltZy5ibG9nLmNzZG4ubmV0LzIwMTgwMzA0MTgyMjQzMzMy?x-oss-process=image/format,png" alt="这里写图片描述"><br>正确执行！<br><strong><em>注意：在settings.py文件中，要进行后续的爬取，需要把<code>ROBOTSTXT_OBEY = False</code>这一行去掉注释</em></strong></p>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>这样我们就创建了一个基础的爬虫项目并用IDE执行了简单的配置和调试功能。<br>下次学习了新知识过后继续与小伙伴们分享！<br>文中若有错误，或按照我的方法无法执行或执行错误，欢迎在下面评论留言。</p>
-
+<h2 id="逻辑结构和物理结构"><a href="#逻辑结构和物理结构" class="headerlink" title="逻辑结构和物理结构"></a>逻辑结构和物理结构</h2><p>逻辑结构：</p>
+<ul>
+<li>线性结构</li>
+<li>树形结构</li>
+<li>图形结构</li>
+<li>集合</li>
+</ul>
+<p>物理结构</p>
+<ul>
+<li>顺序存储</li>
+<li>链式存储</li>
+<li>索引</li>
+<li>散列</li>
+</ul>
+<h2 id="头指针和头节点"><a href="#头指针和头节点" class="headerlink" title="头指针和头节点"></a>头指针和头节点</h2><p>头指针具有标识作用，头节点是虚拟节点</p>
+<h2 id="邻接矩阵和邻接表"><a href="#邻接矩阵和邻接表" class="headerlink" title="邻接矩阵和邻接表"></a>邻接矩阵和邻接表</h2>
     </div>
 
     
@@ -305,8 +370,7 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
-              <a href="/tags/Scrapy/" rel="tag"><i class="fa fa-tag"></i> Scrapy</a>
+              <a href="/tags/%E7%BB%8F%E9%AA%8C%E5%88%86%E4%BA%AB/" rel="tag"><i class="fa fa-tag"></i> 经验分享</a>
           </div>
 
         
@@ -315,12 +379,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2017/11/06/Python%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA%E4%B8%8E%E9%85%8D%E7%BD%AE%EF%BC%88%E8%AF%A6%E7%BB%86%E5%9B%BE%E6%96%87%E8%BF%87%E7%A8%8B%E4%BB%8B%E7%BB%8D%EF%BC%89/" rel="prev" title="Python虚拟环境的搭建与配置（详细图文过程介绍）">
-      <i class="fa fa-chevron-left"></i> Python虚拟环境的搭建与配置（详细图文过程介绍）
+    <a href="/2020/04/24/%E9%A1%B9%E7%9B%AE%E5%A4%8D%E8%AF%95/" rel="prev" title="项目总结">
+      <i class="fa fa-chevron-left"></i> 项目总结
     </a></div>
       <div class="post-nav-item">
-    <a href="/2018/03/17/%E5%9F%BA%E4%BA%8ESQL-server-2014%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C/" rel="next" title="基于SQL server 2014的数据库基础操作">
-      基于SQL server 2014的数据库基础操作 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/" rel="next" title="梯度下降法及其Python实现">
+      梯度下降法及其Python实现 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -380,7 +444,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#本文主要内容"><span class="nav-number">1.</span> <span class="nav-text">本文主要内容</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#具体步骤"><span class="nav-number">2.</span> <span class="nav-text">具体步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#虚拟环境搭建"><span class="nav-number">2.1.</span> <span class="nav-text">虚拟环境搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Srapy框架安装"><span class="nav-number">2.2.</span> <span class="nav-text">Srapy框架安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新建Scrapy项目"><span class="nav-number">2.3.</span> <span class="nav-text">新建Scrapy项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用Pycharm开启项目"><span class="nav-number">2.4.</span> <span class="nav-text">使用Pycharm开启项目</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结语"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机组成"><span class="nav-number">1.</span> <span class="nav-text">计算机组成</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#综述"><span class="nav-number">1.1.</span> <span class="nav-text">综述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机系统的三大总线"><span class="nav-number">1.1.1.</span> <span class="nav-text">计算机系统的三大总线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机的主要结构组件"><span class="nav-number">1.1.2.</span> <span class="nav-text">计算机的主要结构组件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#存储器层次结构的原理"><span class="nav-number">1.1.3.</span> <span class="nav-text">存储器层次结构的原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#冯洛伊曼结构的概念"><span class="nav-number">1.1.4.</span> <span class="nav-text">冯洛伊曼结构的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据单元的存取方法"><span class="nav-number">1.1.5.</span> <span class="nav-text">数据单元的存取方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缓存"><span class="nav-number">1.2.</span> <span class="nav-text">缓存</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cache的映射功能"><span class="nav-number">1.2.1.</span> <span class="nav-text">Cache的映射功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cache的替换算法"><span class="nav-number">1.2.2.</span> <span class="nav-text">Cache的替换算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cache的写策略"><span class="nav-number">1.2.3.</span> <span class="nav-text">Cache的写策略</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#I-O"><span class="nav-number">1.3.</span> <span class="nav-text">I&#x2F;O</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#I-O编址方式"><span class="nav-number">1.3.1.</span> <span class="nav-text">I&#x2F;O编址方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#I-O中断设计问题"><span class="nav-number">1.3.2.</span> <span class="nav-text">I&#x2F;O中断设计问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DMA技术"><span class="nav-number">1.3.3.</span> <span class="nav-text">DMA技术</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CPU"><span class="nav-number">1.4.</span> <span class="nav-text">CPU</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CPU的任务"><span class="nav-number">1.4.1.</span> <span class="nav-text">CPU的任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流水线"><span class="nav-number">1.4.2.</span> <span class="nav-text">流水线</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指令集"><span class="nav-number">1.5.</span> <span class="nav-text">指令集</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#寻址方式"><span class="nav-number">1.5.1.</span> <span class="nav-text">寻址方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指令级并行性和超标量处理器"><span class="nav-number">1.5.2.</span> <span class="nav-text">指令级并行性和超标量处理器</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据结构"><span class="nav-number">2.</span> <span class="nav-text">数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组和链表的区别"><span class="nav-number">2.1.</span> <span class="nav-text">数组和链表的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑结构和物理结构"><span class="nav-number">2.2.</span> <span class="nav-text">逻辑结构和物理结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#头指针和头节点"><span class="nav-number">2.3.</span> <span class="nav-text">头指针和头节点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#邻接矩阵和邻接表"><span class="nav-number">2.4.</span> <span class="nav-text">邻接矩阵和邻接表</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
