@@ -677,20 +677,18 @@ You should consider upgrading via the &#39;python -m pip install --upgrade pip&#
 <li>寄存器寻址</li>
 <li>寄存器简介寻址</li>
 <li>偏移寻址<ul>
-<li>相对寻址</li>
+<li>相对寻址<ul>
 <li>基址寄存器寻址</li>
+</ul>
+</li>
 <li>变址</li>
 </ul>
 </li>
 </ul>
 <h3 id="指令级并行性和超标量处理器"><a href="#指令级并行性和超标量处理器" class="headerlink" title="指令级并行性和超标量处理器"></a>指令级并行性和超标量处理器</h3><p>指令级并行性指：程序中的指令可以并行执行</p>
 <p>超标量处理器：使用多条相互独立的流水线的处理器</p>
-<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h2 id="数组和链表的区别"><a href="#数组和链表的区别" class="headerlink" title="数组和链表的区别"></a>数组和链表的区别</h2><ol>
-<li>数组固定长度，链表长度可变</li>
-<li>数组可通过下标随机访问，链表需要根据下标对链表进行遍历</li>
-<li>数组插入操作不方便</li>
-</ol>
-<h2 id="逻辑结构和物理结构"><a href="#逻辑结构和物理结构" class="headerlink" title="逻辑结构和物理结构"></a>逻辑结构和物理结构</h2><p>逻辑结构：</p>
+<h1 id="数据结构与算法"><a href="#数据结构与算法" class="headerlink" title="数据结构与算法"></a>数据结构与算法</h1><h2 id="综述-1"><a href="#综述-1" class="headerlink" title="综述"></a>综述</h2><h3 id="算法的特点"><a href="#算法的特点" class="headerlink" title="算法的特点"></a>算法的特点</h3><p>确定性、有穷性、可行性、0个或多个输入、1个或多个输出</p>
+<h3 id="逻辑结构和物理结构"><a href="#逻辑结构和物理结构" class="headerlink" title="逻辑结构和物理结构"></a>逻辑结构和物理结构</h3><p>逻辑结构：</p>
 <ul>
 <li>线性结构</li>
 <li>树形结构</li>
@@ -704,8 +702,137 @@ You should consider upgrading via the &#39;python -m pip install --upgrade pip&#
 <li>索引</li>
 <li>散列</li>
 </ul>
-<h2 id="头指针和头节点"><a href="#头指针和头节点" class="headerlink" title="头指针和头节点"></a>头指针和头节点</h2><p>头指针具有标识作用，头节点是虚拟节点</p>
-<h2 id="邻接矩阵和邻接表"><a href="#邻接矩阵和邻接表" class="headerlink" title="邻接矩阵和邻接表"></a>邻接矩阵和邻接表</h2>]]></content>
+<h2 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h2><h3 id="数组和链表的区别"><a href="#数组和链表的区别" class="headerlink" title="数组和链表的区别"></a>数组和链表的区别</h3><ol>
+<li>数组固定长度，链表长度可变</li>
+<li>数组可通过下标随机访问，链表需要根据下标对链表进行遍历</li>
+<li>数组插入操作不方便</li>
+</ol>
+<h3 id="头指针和头节点"><a href="#头指针和头节点" class="headerlink" title="头指针和头节点"></a>头指针和头节点</h3><p>头指针具有标识作用，头节点是虚拟节点。</p>
+<h2 id="栈和队列"><a href="#栈和队列" class="headerlink" title="栈和队列"></a>栈和队列</h2><h3 id="栈和队列的应用"><a href="#栈和队列的应用" class="headerlink" title="栈和队列的应用"></a>栈和队列的应用</h3><p>栈的应用：</p>
+<ul>
+<li>括号匹配</li>
+<li>表达式求值</li>
+<li>递归程序调用</li>
+</ul>
+<p>队列的应用：</p>
+<ul>
+<li>在图的层次遍历中使用</li>
+<li>在计算机的各种设计中使用：CPU按照队列来处理各个程序的请求</li>
+</ul>
+<h2 id="树"><a href="#树" class="headerlink" title="树"></a>树</h2><h3 id="Huffman树"><a href="#Huffman树" class="headerlink" title="Huffman树"></a>Huffman树</h3><p>暂无</p>
+<h2 id="图"><a href="#图" class="headerlink" title="图"></a>图</h2><h3 id="邻接矩阵和邻接表"><a href="#邻接矩阵和邻接表" class="headerlink" title="邻接矩阵和邻接表"></a>邻接矩阵和邻接表</h3><p>邻接矩阵更适合存储稠密图，邻接表更适合存储稀疏图</p>
+<h3 id="最小生成树"><a href="#最小生成树" class="headerlink" title="最小生成树"></a>最小生成树</h3><p>Prim算法：选择点</p>
+<p>Kruskal算法：选择边</p>
+<h3 id="最短路径"><a href="#最短路径" class="headerlink" title="最短路径"></a>最短路径</h3><p>Dijkstra算法：单元最短路径，不适合带有负权值的边的图。</p>
+<p>Floyd算法：虽然允许负权边，但是不允许有包含带负权值的边组成的回路。</p>
+<h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><p>静态查找：顺序查找、二分查找、分块查找</p>
+<p>动态查找：二叉查找树、平衡二叉查找树</p>
+<h3 id="散列表"><a href="#散列表" class="headerlink" title="散列表"></a>散列表</h3><p>概念：根据关键字直接进行访问数据的数据结构</p>
+<p>散列函数：</p>
+<ul>
+<li>直接定址法：H(key) = a * key + b</li>
+<li>除留余数法：H(key) = key % p</li>
+<li>数字分析法</li>
+<li>平方取中法</li>
+<li>折叠法</li>
+</ul>
+<p>处理冲突方法：</p>
+<ul>
+<li>开放定址法<ul>
+<li>线性探测法：可能引起聚集</li>
+<li>平方探测法：可避免聚集</li>
+<li>再散列法</li>
+<li>伪随机序列法</li>
+</ul>
+</li>
+<li>拉链法</li>
+</ul>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><div class="table-container">
+<table>
+<thead>
+<tr>
+<th>冒泡</th>
+<th style="text-align:center">最好情况时间复杂度</th>
+<th style="text-align:center">平均情况时间复杂度</th>
+<th style="text-align:center">最坏情况时间复杂度</th>
+<th style="text-align:center">空间复杂度</th>
+<th style="text-align:center">是否稳定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>冒泡</td>
+<td style="text-align:center">n</td>
+<td style="text-align:center">n^2</td>
+<td style="text-align:center">n^2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">√</td>
+</tr>
+<tr>
+<td>选择</td>
+<td style="text-align:center">n^2</td>
+<td style="text-align:center">n^2</td>
+<td style="text-align:center">n^2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">×</td>
+</tr>
+<tr>
+<td>直接插入</td>
+<td style="text-align:center">n</td>
+<td style="text-align:center">n^2</td>
+<td style="text-align:center">n^2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">√</td>
+</tr>
+<tr>
+<td>希尔</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">-</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">×</td>
+</tr>
+<tr>
+<td>快排</td>
+<td style="text-align:center">n*logn</td>
+<td style="text-align:center">n*logn</td>
+<td style="text-align:center">n^2</td>
+<td style="text-align:center">logn</td>
+<td style="text-align:center">×</td>
+</tr>
+<tr>
+<td>归并</td>
+<td style="text-align:center">n*logn</td>
+<td style="text-align:center">n*logn</td>
+<td style="text-align:center">n*logn</td>
+<td style="text-align:center">n</td>
+<td style="text-align:center">√</td>
+</tr>
+<tr>
+<td>堆</td>
+<td style="text-align:center">n*logn</td>
+<td style="text-align:center">n*logn</td>
+<td style="text-align:center">n*logn</td>
+<td style="text-align:center">logn</td>
+<td style="text-align:center">×</td>
+</tr>
+<tr>
+<td>基数</td>
+<td style="text-align:center">d*(n+r)</td>
+<td style="text-align:center">d*(n+r)</td>
+<td style="text-align:center">d*(n+r)</td>
+<td style="text-align:center">r</td>
+<td style="text-align:center">√</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h2 id="什么是线程、进程，它们的区别是什么"><a href="#什么是线程、进程，它们的区别是什么" class="headerlink" title="什么是线程、进程，它们的区别是什么"></a>什么是线程、进程，它们的区别是什么</h2><h1 id="UML"><a href="#UML" class="headerlink" title="UML"></a>UML</h1><p>统一建模语言。</p>
+<p>类图、用例图、顺序图、协作图（与顺序图可以转换）、状态图、活动图、构件图、部署图</p>
+<p>关联、泛化、依赖</p>
+<p>聚集、组成、接口和实现</p>
+<p>扩展、包含</p>
+]]></content>
       <categories>
         <category>经验分享</category>
       </categories>
