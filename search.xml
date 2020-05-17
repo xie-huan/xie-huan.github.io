@@ -644,10 +644,8 @@ You should consider upgrading via the &#39;python -m pip install --upgrade pip&#
 <li>寄存器寻址</li>
 <li>寄存器简介寻址</li>
 <li>偏移寻址<ul>
-<li>相对寻址<ul>
+<li>相对寻址</li>
 <li>基址寄存器寻址</li>
-</ul>
-</li>
 <li>变址</li>
 </ul>
 </li>
@@ -809,6 +807,9 @@ You should consider upgrading via the &#39;python -m pip install --upgrade pip&#
 <p>聚集、组成、接口和实现</p>
 <p>扩展、包含</p>
 <h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><p>待更新</p>
+<h1 id="软件测试"><a href="#软件测试" class="headerlink" title="软件测试"></a>软件测试</h1><p>黑盒测试的方法：等价类划分、边界值分析、因果图分析法</p>
+<p>白盒测试的方法：语句覆盖、判定覆盖、条件覆盖、判定条件覆盖、条件组合覆盖、路径覆盖</p>
+<h1 id="密码学"><a href="#密码学" class="headerlink" title="密码学"></a>密码学</h1><p>待更新</p>
 ]]></content>
       <categories>
         <category>经验分享</category>
@@ -833,9 +834,9 @@ You should consider upgrading via the &#39;python -m pip install --upgrade pip&#
 <p>第二范式：在1NF的前提下，非主属性完全依赖于主属性</p>
 <p>第三范式：在2NF的前提下，不存在传递依赖于主属性</p>
 <h2 id="Q3计算机网络的七层协议"><a href="#Q3计算机网络的七层协议" class="headerlink" title="Q3计算机网络的七层协议"></a>Q3计算机网络的七层协议</h2><p>应用层、表示层、会话层、运输层、网络层、链路层、物理层</p>
-<h2 id="Q4了解大数据概念吗？"><a href="#Q4了解大数据概念吗？" class="headerlink" title="Q4了解大数据概念吗？"></a>Q4了解大数据概念吗？</h2><p>大数据是一个领域，与数据仓库和数据挖掘相联系。</p>
-<p>数据仓库是指面向主题的，集成的，随时间不断变化的数据集合。而数据挖掘是从这种大量的数据集合中，提取出对我们有价值的信息。</p>
-<p>在大数据工程导论这门课上，我配置了Hadoop分布式集群，并使用Eclipse运行了MapReduce项目，balabala</p>
+<h2 id="Q4了解大数据概念吗？"><a href="#Q4了解大数据概念吗？" class="headerlink" title="Q4了解大数据概念吗？"></a>Q4了解大数据概念吗？</h2><p>大数据通常具有的特点是数据量大、数据类型多样、数据价值密度较低、时效性要求较高。使用常规化手段无法存储、处理这些数据，需要新的处理模式来面对这样的海量信息。</p>
+<p>我认为大数据与数据仓库和数据挖掘相联系。数据仓库是指面向主题的，集成的，随时间不断变化的数据集合。而数据挖掘是从这种大量的数据集合中，提取出对我们有价值的信息。</p>
+<p>在大数据工程导论这门课上，我配置了Hadoop分布式集群，并使用Eclipse运行了MapReduce项目，让我真实感受到了处理大数据的一种方法。</p>
 <h2 id="Q5C-和Java的区别了解吗？用英语回答试试。"><a href="#Q5C-和Java的区别了解吗？用英语回答试试。" class="headerlink" title="Q5C++和Java的区别了解吗？用英语回答试试。"></a>Q5C++和Java的区别了解吗？用英语回答试试。</h2><ol>
 <li>C++即可面向对象又可面向过程，而Java是纯面向对象语言。</li>
 <li>C++有指针，Java没有指针，但是有引用。</li>
@@ -847,7 +848,7 @@ You should consider upgrading via the &#39;python -m pip install --upgrade pip&#
 <h2 id="Q6用过哪些编程软件、学过哪些编程语言，最擅长哪种语言？你觉得这种语言最难的地方是什么"><a href="#Q6用过哪些编程软件、学过哪些编程语言，最擅长哪种语言？你觉得这种语言最难的地方是什么" class="headerlink" title="Q6用过哪些编程软件、学过哪些编程语言，最擅长哪种语言？你觉得这种语言最难的地方是什么"></a>Q6用过哪些编程软件、学过哪些编程语言，最擅长哪种语言？你觉得这种语言最难的地方是什么</h2><p>学习C和C++的时候用的vs，学习Java的时候用的Eclipse，学python的时候用的Geany，后面偶然遇到了jetbrains的编辑器，就一直用这个系列的。</p>
 <p>最擅长的是python语言，因为平时很多项目，像可视化、数据清洗这些用python很方便。</p>
 <p>python的难点应该在于，我认为所有的编程语言难点都在如何运用，可能学会一种语言的语法很简单，但是学完后马上解决问题，感觉就写不出来，这就是运用的问题。多看看别人写的优秀代码，自己模仿着思路写一写，慢慢就会运用这个语言了。语言也只是工具，更重要的是编程思想。</p>
-<h2 id="Q7做过哪些项目，用了哪些技术，选一个擅长的项目介绍一下？"><a href="#Q7做过哪些项目，用了哪些技术，选一个擅长的项目介绍一下？" class="headerlink" title="Q7做过哪些项目，用了哪些技术，选一个擅长的项目介绍一下？"></a>Q7做过哪些项目，用了哪些技术，选一个擅长的项目介绍一下？</h2><p>项目介绍详见简历和博客介绍：<a href="https://xie-huan.github.io/2020/04/24/%E9%A1%B9%E7%9B%AE%E5%A4%8D%E8%AF%95/">项目介绍</a></p>
+<h2 id="Q7做过哪些项目，用了哪些技术，选一个擅长的项目介绍一下？"><a href="#Q7做过哪些项目，用了哪些技术，选一个擅长的项目介绍一下？" class="headerlink" title="Q7做过哪些项目，用了哪些技术，选一个擅长的项目介绍一下？"></a>Q7做过哪些项目，用了哪些技术，选一个擅长的项目介绍一下？</h2><p>项目介绍详见简历和博客介绍：<a href="https://xie-huan.github.io/2020/04/24/%E5%A4%8D%E8%AF%95%E9%A1%B9%E7%9B%AE%E5%87%86%E5%A4%87/">项目准备</a></p>
 <h2 id="Q8你对人工智能、机器学习的理解？"><a href="#Q8你对人工智能、机器学习的理解？" class="headerlink" title="Q8你对人工智能、机器学习的理解？"></a>Q8你对人工智能、机器学习的理解？</h2><p>人工智能是一个大领域，其主要思想是，让机器模拟人的思想，就像拥有人的智能一样，而机器学习是实现人工智能的一个方法，机器学习最基本的思路是使用算法对数据进行分析，建立出相应的模型，然后使用模型对真实世界中的数据做出预测。实现人工智能的其他方法还有自然语言理解、计算机视觉等方面。</p>
 <h2 id="Q9你对自己感兴趣的领域做过哪些方面的研究"><a href="#Q9你对自己感兴趣的领域做过哪些方面的研究" class="headerlink" title="Q9你对自己感兴趣的领域做过哪些方面的研究"></a>Q9你对自己感兴趣的领域做过哪些方面的研究</h2><p>通过去年暑假找到的实习机会，是做自动化测试，然后这次毕业设计，是做软件缺陷定位的，通过这些项目经历，我对软件测试相关的内容非常感兴趣。</p>
 <h2 id="Q10初试考了C语言，你觉得C语言的难点是什么？"><a href="#Q10初试考了C语言，你觉得C语言的难点是什么？" class="headerlink" title="Q10初试考了C语言，你觉得C语言的难点是什么？"></a>Q10初试考了C语言，你觉得C语言的难点是什么？</h2><p>C语言难点—-仁者见仁，智者见智。</p>
@@ -869,12 +870,39 @@ You should consider upgrading via the &#39;python -m pip install --upgrade pip&#
 <h1 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h1><h2 id="中文自我介绍"><a href="#中文自我介绍" class="headerlink" title="中文自我介绍"></a>中文自我介绍</h2><p>各位老师，你们好！我叫谢欢，来自重庆云阳，是重庆大学大数据与软件学院2016级本科生。我很高兴能参加这次研究生复试。</p>
 <p>我的优点是主动性强，在疫情期间，我主动联系毕设导师， 进行毕业设计的内容，不拖延，主动学习相关知识；然后我动手能力比较强，对于大学课程中的实验 ，例如操作系统的实验、大数据平台搭建我都能按照自己的想法进行实现，并取得不错的效果；最后我也积极主动寻找锻炼机会，在去年暑假获得了华为实习的机会。</p>
 <p>如果能有机会进入重庆大学攻读研究生学位，我定将发挥自己的优势，做出应有的成果。谢谢大家！</p>
-<h2 id="英语自我介绍"><a href="#英语自我介绍" class="headerlink" title="英语自我介绍"></a>英语自我介绍</h2><p>Good morning/afternoon, professors. I am really glad to be here for this interview. Now, please allow me to give a brief self-introduction. </p>
+<h2 id="英语自我介绍"><a href="#英语自我介绍" class="headerlink" title="英语自我介绍"></a>英语自我介绍</h2><p>Good morning/afternoon, professors. I am really glad to be here for this interview. Now, please allow me to give you a brief self-introduction. </p>
 <p>My name is Xiehuan, 22 years old. I was born in Yunyang, a small but beautiful town in Chongqing province.<br>I entered the Chongqing University 4 years ago, and became a student majoring in Software Engineering.<br>Through studying professional knowledge, I find that I am fond of this major. Up to now, I realize that what I have learned is far from enough, so I take it necessary to continue my learning in this major.</p>
 <p>During the four years in Chongqing University, I read a lot. In addition to the books that I need for my major courses, I also read some classic books in the field of computer, such as Compilers principles, Computer Systems A Programmer’s Perspective(CSAPP). Moreover, I am not limited to theoretical knowledge, I practice a lot according to the contents of the books. The practice can deepen my understanding of knowledge. So I benefit a lot from it. Last but not least, I’d love to share ideas and discuss them with others. Express our ideas is so important that I often try my best to communicate with the foreign teacher in class, even though my spoken English is not pretty well. </p>
 <p>As is well-known, Chongqing University is an outstanding college with perfect academic atmosphere and highly qualified faculty.  And I would appreciate it if you could give me the chance for the further study!</p>
 <p>That’s all about my self-introduction. Thanks for your attention!</p>
-]]></content>
+<h1 id="面试当日收集"><a href="#面试当日收集" class="headerlink" title="面试当日收集"></a>面试当日收集</h1><h2 id="Q1大数据现在的痛点"><a href="#Q1大数据现在的痛点" class="headerlink" title="Q1大数据现在的痛点"></a>Q1大数据现在的痛点</h2><p>我认为，大数据现在存在的问题有：</p>
+<ol>
+<li>数据来源。大数据自然需要海量数据来支撑，但是数据并不是完全开放，比如政府的政务的数据不会公开，企业的用户信息也会成为企业重要的财富等。</li>
+<li>数据安全。大量数据必定涉及大量用户的各种信息，各种数据中又含有大量有价值的信息，导致不怀好意的人使用各种手段对数据进行窃取。</li>
+<li>数据存储。存储海量数据，要求在数据存储技术上的更新升级，</li>
+</ol>
+<h2 id="Q2指针和引用的区别"><a href="#Q2指针和引用的区别" class="headerlink" title="Q2指针和引用的区别"></a>Q2指针和引用的区别</h2><ul>
+<li>指针是一个地址，引用是一个别名</li>
+<li>通过指针指向的地址，可以找到对应的内存中的内容。这个地址是一个数值，可以为空指针。但是引用是一个变量或对象的别名，不能为空。</li>
+<li>所以引用在创建时必须初始化，而指针不用。</li>
+</ul>
+<h2 id="Q3本科期间代码行数"><a href="#Q3本科期间代码行数" class="headerlink" title="Q3本科期间代码行数"></a>Q3本科期间代码行数</h2><h2 id="Q4线性回归和非线性回归、逻辑回归的概念、区别"><a href="#Q4线性回归和非线性回归、逻辑回归的概念、区别" class="headerlink" title="Q4线性回归和非线性回归、逻辑回归的概念、区别"></a>Q4线性回归和非线性回归、逻辑回归的概念、区别</h2><h2 id="Q5大数据中信息泄露的原因可能有哪些？"><a href="#Q5大数据中信息泄露的原因可能有哪些？" class="headerlink" title="Q5大数据中信息泄露的原因可能有哪些？"></a>Q5大数据中信息泄露的原因可能有哪些？</h2><ul>
+<li>基础设施故障</li>
+<li>数据处理不规范：比如没有加密等</li>
+<li>人为操作不当</li>
+<li>数据监管不足</li>
+<li>黑客攻击</li>
+</ul>
+<h2 id="Q6new开辟的空间在哪里"><a href="#Q6new开辟的空间在哪里" class="headerlink" title="Q6new开辟的空间在哪里"></a>Q6new开辟的空间在哪里</h2><p>堆。</p>
+<h2 id="Q7广义表和线性表的区别"><a href="#Q7广义表和线性表的区别" class="headerlink" title="Q7广义表和线性表的区别"></a>Q7广义表和线性表的区别</h2><p>广义表是线性表的推广，是由零个或多个元素组成的有限序列。</p>
+<p>线性表的成分都是结构上不可分的单个数据元素，广义表里面的数据元素可以有单个数据元素，也可以是其他有结构的表。</p>
+<h2 id="Q8软件工程与人工智能的区别"><a href="#Q8软件工程与人工智能的区别" class="headerlink" title="Q8软件工程与人工智能的区别"></a>Q8软件工程与人工智能的区别</h2><p>首先说一下概念：软件工程是什么，人工智能是什么</p>
+<p>然后我认为，使用机器学习实现人工智能，也要遵循软件工程的基本思想。在科学的、可量化的条件下，开发与人工智能有关的软件，才能使</p>
+<h2 id="Q9了解大数据概念吗？"><a href="#Q9了解大数据概念吗？" class="headerlink" title="Q9了解大数据概念吗？"></a>Q9了解大数据概念吗？</h2><p>大数据通常具有的特点是数据量大、数据类型多样、数据价值密度较低、时效性要求较高。使用常规化手段无法存储、处理这些数据，需要新的处理模式来面对这样的海量信息。</p>
+<p>我认为大数据与数据仓库和数据挖掘相联系。数据仓库是指面向主题的，集成的，随时间不断变化的数据集合。而数据挖掘是从这种大量的数据集合中，提取出对我们有价值的信息。</p>
+<p>在大数据工程导论这门课上，我配置了Hadoop分布式集群，并使用Eclipse运行了MapReduce项目，让我真实感受到了处理大数据的一种方法。</p>
+<h2 id="Q10反向传播思想"><a href="#Q10反向传播思想" class="headerlink" title="Q10反向传播思想"></a>Q10反向传播思想</h2><p>BP算法的基本思想是，学习过程由信号的正向传播与误差反向传播两个过程组成。正向传播时，输入样本从输入层传入，经过各隐层逐层处理后，传向输出层。若输出层的实际输出与期望输出不符，则转入误差的反向传播阶段。误差反向传播是将输出误差以某种形式通过隐层向输入层逐层反传，并将误差分摊给各层的所有单元，从而获得各层的误差信号，此误差信号即作为修正单元权值的依据。这种信号正向传播与误差反向传播的各层权值调整过程周而复始的进行，权值不断调整的过程，也就是网络学习训练的过程，此过程一直进行到网络输出的误差减少到可接受的程度，或进行到预先设定的学习次数为止。</p>
+<h2 id="Q11The-definition-of-machine-learning"><a href="#Q11The-definition-of-machine-learning" class="headerlink" title="Q11The definition of machine learning"></a>Q11The definition of machine learning</h2><h2 id="Q12The-definition-of-big-data"><a href="#Q12The-definition-of-big-data" class="headerlink" title="Q12The definition of big data"></a>Q12The definition of big data</h2>]]></content>
       <categories>
         <category>经验分享</category>
       </categories>
