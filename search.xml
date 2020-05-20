@@ -886,7 +886,7 @@ You should consider upgrading via the &#39;python -m pip install --upgrade pip&#
 <li>通过指针指向的地址，可以找到对应的内存中的内容。这个地址是一个数值，可以为空指针。但是引用是一个变量或对象的别名，不能为空。</li>
 <li>所以引用在创建时必须初始化，而指针不用。</li>
 </ul>
-<h2 id="Q3本科期间代码行数"><a href="#Q3本科期间代码行数" class="headerlink" title="Q3本科期间代码行数"></a>Q3本科期间代码行数</h2><h2 id="Q4线性回归和非线性回归、逻辑回归的概念、区别"><a href="#Q4线性回归和非线性回归、逻辑回归的概念、区别" class="headerlink" title="Q4线性回归和非线性回归、逻辑回归的概念、区别"></a>Q4线性回归和非线性回归、逻辑回归的概念、区别</h2><h2 id="Q5大数据中信息泄露的原因可能有哪些？"><a href="#Q5大数据中信息泄露的原因可能有哪些？" class="headerlink" title="Q5大数据中信息泄露的原因可能有哪些？"></a>Q5大数据中信息泄露的原因可能有哪些？</h2><ul>
+<h2 id="Q3估计一下本科期间代码行数"><a href="#Q3估计一下本科期间代码行数" class="headerlink" title="Q3估计一下本科期间代码行数"></a>Q3估计一下本科期间代码行数</h2><h2 id="Q4线性回归和非线性回归、逻辑回归的概念、区别"><a href="#Q4线性回归和非线性回归、逻辑回归的概念、区别" class="headerlink" title="Q4线性回归和非线性回归、逻辑回归的概念、区别"></a>Q4线性回归和非线性回归、逻辑回归的概念、区别</h2><h2 id="Q5大数据中信息泄露的原因可能有哪些？"><a href="#Q5大数据中信息泄露的原因可能有哪些？" class="headerlink" title="Q5大数据中信息泄露的原因可能有哪些？"></a>Q5大数据中信息泄露的原因可能有哪些？</h2><ul>
 <li>基础设施故障</li>
 <li>数据处理不规范：比如没有加密等</li>
 <li>人为操作不当</li>
@@ -902,7 +902,9 @@ You should consider upgrading via the &#39;python -m pip install --upgrade pip&#
 <p>我认为大数据与数据仓库和数据挖掘相联系。数据仓库是指面向主题的，集成的，随时间不断变化的数据集合。而数据挖掘是从这种大量的数据集合中，提取出对我们有价值的信息。</p>
 <p>在大数据工程导论这门课上，我配置了Hadoop分布式集群，并使用Eclipse运行了MapReduce项目，让我真实感受到了处理大数据的一种方法。</p>
 <h2 id="Q10反向传播思想"><a href="#Q10反向传播思想" class="headerlink" title="Q10反向传播思想"></a>Q10反向传播思想</h2><p>BP算法的基本思想是，学习过程由信号的正向传播与误差反向传播两个过程组成。正向传播时，输入样本从输入层传入，经过各隐层逐层处理后，传向输出层。若输出层的实际输出与期望输出不符，则转入误差的反向传播阶段。误差反向传播是将输出误差以某种形式通过隐层向输入层逐层反传，并将误差分摊给各层的所有单元，从而获得各层的误差信号，此误差信号即作为修正单元权值的依据。这种信号正向传播与误差反向传播的各层权值调整过程周而复始的进行，权值不断调整的过程，也就是网络学习训练的过程，此过程一直进行到网络输出的误差减少到可接受的程度，或进行到预先设定的学习次数为止。</p>
-<h2 id="Q11The-definition-of-machine-learning"><a href="#Q11The-definition-of-machine-learning" class="headerlink" title="Q11The definition of machine learning"></a>Q11The definition of machine learning</h2><h2 id="Q12The-definition-of-big-data"><a href="#Q12The-definition-of-big-data" class="headerlink" title="Q12The definition of big data"></a>Q12The definition of big data</h2>]]></content>
+<h2 id="Q11The-definition-of-machine-learning"><a href="#Q11The-definition-of-machine-learning" class="headerlink" title="Q11The definition of machine learning"></a>Q11The definition of machine learning</h2><p>根据自己的理解说即可</p>
+<h2 id="Q12The-definition-of-big-data"><a href="#Q12The-definition-of-big-data" class="headerlink" title="Q12The definition of big data"></a>Q12The definition of big data</h2><p>根据自己的理解说即可</p>
+]]></content>
       <categories>
         <category>经验分享</category>
       </categories>
@@ -943,6 +945,37 @@ You should consider upgrading via the &#39;python -m pip install --upgrade pip&#
       </categories>
       <tags>
         <tag>总结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>决策树</title>
+    <url>/2020/05/20/%E5%86%B3%E7%AD%96%E6%A0%91/</url>
+    <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><h2 id="什么是决策树"><a href="#什么是决策树" class="headerlink" title="什么是决策树"></a>什么是决策树</h2><p>决策树(Decision Tree）是在已知各种情况发生概率的<a href="https://baike.baidu.com/item/基础/32794" target="_blank" rel="noopener">基础</a>上，通过构成决策树来求取净现值的<a href="https://baike.baidu.com/item/期望/35704" target="_blank" rel="noopener">期望</a>值大于等于零的概率，评价项目风险，判断其可行性的决策分析方法，是直观运用概率分析的一种图解法。由于这种决策分支画成图形很像一棵树的枝干，故称决策树。在机器学习中，决策树是一个预测模型，他代表的是对象属性与对象值之间的一种映射关系。——摘自百度百科</p>
+<p>概念读起来不够感性。为了大家更直观地认识一下决策树，举一个生活中常见的例子：一个面试官要招聘机器学习算法工程师。</p>
+<a id="more"></a>
+<p><img src="/2020/05/20/%E5%86%B3%E7%AD%96%E6%A0%91/决策树举例.png" alt></p>
+<p>作为面试官，首先，我们考察应聘者是否在机器学习算法领域中发表过论文，如果发表论文，就直接录用。若没有发表过论文，就考察下一个指标，比如是否是研究生，如果是研究生，就看该研究生的研究领域是否为机器学习相关，若相关，则录用，若不相关，就继续深入考察其他方面，例如在该领域是否有实践等等。</p>
+<h2 id="决策树的特点"><a href="#决策树的特点" class="headerlink" title="决策树的特点"></a>决策树的特点</h2><ul>
+<li>决策树为非参数学习算法</li>
+<li>可以解决分类问题</li>
+<li>天然可以解决多分类问题，逻辑回归，SVM只能通过OvR，OvO来解决</li>
+<li>也可以解决回归问题</li>
+<li>具有非常好的可解释性<h2 id="怎么构建决策树"><a href="#怎么构建决策树" class="headerlink" title="怎么构建决策树"></a>怎么构建决策树</h2></li>
+<li>每个节点在哪个维度做划分？</li>
+<li>某个维度在哪个值上做划分？</li>
+</ul>
+<h1 id="决策树实战"><a href="#决策树实战" class="headerlink" title="决策树实战"></a>决策树实战</h1><p>下面，我使用一个简单的例子，来可视化出决策树的决策边界，就如逻辑回归中绘制决策边界一样。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> datasets</span><br><span class="line"></span><br><span class="line"><span class="comment"># 加载数据</span></span><br><span class="line">iris = datasets.load_iris()</span><br><span class="line">X = iris.data[:,<span class="number">2</span>:]</span><br><span class="line">y = iris.target</span><br><span class="line"></span><br><span class="line"><span class="comment"># 数据可视化</span></span><br><span class="line">plt.scatter(X[y==<span class="number">0</span>,<span class="number">0</span>],X[y==<span class="number">0</span>,<span class="number">1</span>])</span><br><span class="line">plt.scatter(X[y==<span class="number">1</span>,<span class="number">0</span>],X[y==<span class="number">1</span>,<span class="number">1</span>])</span><br><span class="line">plt.scatter(X[y==<span class="number">2</span>,<span class="number">0</span>],X[y==<span class="number">2</span>,<span class="number">1</span>])</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/05/20/%E5%86%B3%E7%AD%96%E6%A0%91/数据举例可视化.png" alt></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 分类</span></span><br><span class="line"><span class="keyword">from</span> sklearn.tree <span class="keyword">import</span> DecisionTreeClassifier</span><br><span class="line"></span><br><span class="line"><span class="comment"># max_depth决策树最高深度，criterion为entropy，熵的意思</span></span><br><span class="line">dt_clf = DecisionTreeClassifier(max_depth=<span class="number">2</span>,criterion=<span class="string">'entropy'</span>)</span><br><span class="line">dt_clf.fit(X,y)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+        <tag>代码实现</tag>
+        <tag>决策树</tag>
       </tags>
   </entry>
 </search>
