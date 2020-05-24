@@ -856,7 +856,7 @@ You should consider upgrading via the &#39;python -m pip install --upgrade pip&#
 <p>遇到问题，首先最重要的是应该分清楚，这是一个什么样的问题，是业务规则上的不对，还是程序实现上的不对，对症下药。举个例子，如果是程序实现上的不对，报错了，我们应该采用调试的办法，先自己调试代码，争取自己找到出错的地方，增加自己的调试能力，如果自己解决不了，应该去网上查找资料，看看别人遇到此问题，是如何解决的。这种过程能加深我们对错误的理解，以便于下次遇到问题，能够自己解决。</p>
 <h2 id="Q12你觉得软件开发最重要的环节是什么？"><a href="#Q12你觉得软件开发最重要的环节是什么？" class="headerlink" title="Q12你觉得软件开发最重要的环节是什么？"></a>Q12你觉得软件开发最重要的环节是什么？</h2><p>最重要的环节应该是一个前提条件，即充分、正确地了解客户的需求。因为我们的软件，是要给用户带来使用体验，给用户方便，如果用户不满意，这个软件很可能就无法得到它期望的效果。反映到现实生活中，就是软件无法带来经济效益。</p>
 <h2 id="Q13说一个你熟悉的设计模式"><a href="#Q13说一个你熟悉的设计模式" class="headerlink" title="Q13说一个你熟悉的设计模式"></a>Q13说一个你熟悉的设计模式</h2><p>单例模式，我在实习期间，做了一个项目，主要功能是将测试报告写入Excel、HTML和数据库中，而且要求每个程序只能生成一个对象进行写入，我使用了单例模式。我了解两种单例模式，一是饿汉式，二是双重检验机制。饿汉式不是线程安全的，如果两个线程并行运行，可能会导致两次创建实例对象。双重检验机制使用了同步与检测，线程安全，但效率也降低了。实现单例模式还有一些其他的方法，如枚举法实现单例，我没有进行深入的研究。</p>
-<h2 id="Q14介绍一下你的毕设项目吧"><a href="#Q14介绍一下你的毕设项目吧" class="headerlink" title="Q14介绍一下你的毕设项目吧"></a>Q14介绍一下你的毕设项目吧</h2><p>毕设项目见我的项目复试准备。<a href="https://xie-huan.github.io/2020/04/24/%E5%A4%8D%E8%AF%95%E9%A1%B9%E7%9B%AE%E5%87%86%E5%A4%87/">项目准备</a></p>
+<h2 id="Q14介绍一下你的毕设项目吧"><a href="#Q14介绍一下你的毕设项目吧" class="headerlink" title="Q14介绍一下你的毕设项目吧"></a>Q14介绍一下你的毕设项目吧</h2><p>我的毕设项目见我的项目复试准备。<a href="https://xie-huan.github.io/2020/04/24/%E5%A4%8D%E8%AF%95%E9%A1%B9%E7%9B%AE%E5%87%86%E5%A4%87/">项目准备</a></p>
 <h1 id="专业规划问题"><a href="#专业规划问题" class="headerlink" title="专业规划问题"></a>专业规划问题</h1><h2 id="Q1你对什么研究方向感兴趣？对这个方向的理解、项目经验？"><a href="#Q1你对什么研究方向感兴趣？对这个方向的理解、项目经验？" class="headerlink" title="Q1你对什么研究方向感兴趣？对这个方向的理解、项目经验？"></a>Q1你对什么研究方向感兴趣？对这个方向的理解、项目经验？</h2><p>我去年去公司实习，主要做的内容是测试自动化，最近做的毕业设计，与软件缺陷定位相关，在这个实践过程中，我对软件测试的兴趣逐渐增加。我认为，软件测试不仅仅是常规意义上的测试软件功能是否正常，而是通过与各种技术结合，以更少的人工干预，来完成测试内容。</p>
 <h2 id="Q2你的读研期间规划是什么？更长远的呢？"><a href="#Q2你的读研期间规划是什么？更长远的呢？" class="headerlink" title="Q2你的读研期间规划是什么？更长远的呢？"></a>Q2你的读研期间规划是什么？更长远的呢？</h2><p>读研期间规划：首先要踏实学好基础知识，不管做什么事情，基础首先是最重要的；然后就是跟着导师，多学习，多了解学术前沿知识和发展动态；最后，多思考，多动手，多实践，争取在某个领域内，有自己独到的见解。</p>
 <h1 id="经历感悟问题"><a href="#经历感悟问题" class="headerlink" title="经历感悟问题"></a>经历感悟问题</h1><h2 id="说说本科阶段你最有成就感的事情-遇到的最大挫折是什么，是怎么解决的"><a href="#说说本科阶段你最有成就感的事情-遇到的最大挫折是什么，是怎么解决的" class="headerlink" title="说说本科阶段你最有成就感的事情 / 遇到的最大挫折是什么，是怎么解决的"></a>说说本科阶段你最有成就感的事情 / 遇到的最大挫折是什么，是怎么解决的</h2><p>最大挫折/成就感的事情是：实习期间做的项目，需要重构一个测试仪表的代码，逻辑结构很复杂。详细描述哪里困难。最后与同事进行沟通，自己调试代码，最后解决。</p>
@@ -867,15 +867,19 @@ You should consider upgrading via the &#39;python -m pip install --upgrade pip&#
 <h1 id="补充："><a href="#补充：" class="headerlink" title="补充："></a>补充：</h1><h2 id="六级"><a href="#六级" class="headerlink" title="六级"></a>六级</h2><p>483</p>
 <h2 id="大学成绩"><a href="#大学成绩" class="headerlink" title="大学成绩"></a>大学成绩</h2><p>3.19  排名40% （太辣鸡了。。。）</p>
 <h2 id="研究生感兴趣的方向"><a href="#研究生感兴趣的方向" class="headerlink" title="研究生感兴趣的方向"></a>研究生感兴趣的方向</h2><p>机器学习、大数据、测试自动化</p>
-<h1 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h1><h2 id="中文自我介绍"><a href="#中文自我介绍" class="headerlink" title="中文自我介绍"></a>中文自我介绍</h2><p>各位老师，你们好！我叫谢欢，来自重庆云阳，是重庆大学大数据与软件学院2016级本科生。我很高兴能参加这次研究生复试。</p>
-<p>我的优点是主动性强，在疫情期间，我主动联系毕设导师， 进行毕业设计的内容，不拖延，主动学习相关知识；然后我动手能力比较强，对于大学课程中的实验 ，例如操作系统的实验、大数据平台搭建我都能按照自己的想法进行实现，并取得不错的效果；最后我也积极主动寻找锻炼机会，在去年暑假获得了华为实习的机会。</p>
-<p>如果能有机会进入重庆大学攻读研究生学位，我定将发挥自己的优势，做出应有的成果。谢谢大家！</p>
-<h2 id="英语自我介绍"><a href="#英语自我介绍" class="headerlink" title="英语自我介绍"></a>英语自我介绍</h2><p>Good morning/afternoon, professors. I am really glad to be here for this interview. Now, please allow me to give you a brief self-introduction. </p>
-<p>My name is Xiehuan, 22 years old. I was born in Yunyang, a small but beautiful town in Chongqing province.<br>I entered the Chongqing University 4 years ago, and became a student majoring in Software Engineering.<br>Through studying professional knowledge, I find that I am fond of this major. Up to now, I realize that what I have learned is far from enough, so I take it necessary to continue my learning in this major.</p>
-<p>During the four years in Chongqing University, I read a lot. In addition to the books that I need for my major courses, I also read some classic books in the field of computer, such as Compilers principles, Computer Systems A Programmer’s Perspective(CSAPP). Moreover, I am not limited to theoretical knowledge, I practice a lot according to the contents of the books. The practice can deepen my understanding of knowledge. So I benefit a lot from it. Last but not least, I’d love to share ideas and discuss them with others. Express our ideas is so important that I often try my best to communicate with the foreign teacher in class, even though my spoken English is not pretty well. </p>
-<p>As is well-known, Chongqing University is an outstanding college with perfect academic atmosphere and highly qualified faculty.  And I would appreciate it if you could give me the chance for the further study!</p>
-<p>That’s all about my self-introduction. Thanks for your attention!</p>
-<h1 id="面试当日收集"><a href="#面试当日收集" class="headerlink" title="面试当日收集"></a>面试当日收集</h1><h2 id="Q1大数据现在的痛点"><a href="#Q1大数据现在的痛点" class="headerlink" title="Q1大数据现在的痛点"></a>Q1大数据现在的痛点</h2><p>我认为，大数据现在存在的问题有：</p>
+<h1 id="自我介绍"><a href="#自我介绍" class="headerlink" title="自我介绍"></a>自我介绍</h1><h2 id="中文自我介绍"><a href="#中文自我介绍" class="headerlink" title="中文自我介绍"></a>中文自我介绍</h2><!--各位老师，你们好！我叫谢欢，来自重庆云阳，是重庆大学大数据与软件学院2016级本科生。我很高兴能参加这次研究生复试。-->
+<!--我的优点是主动性强，在疫情期间，我主动联系毕设导师， 进行毕业设计的内容，不拖延，主动学习相关知识；然后我动手能力比较强，对于大学课程中的实验 ，例如操作系统的实验、大数据平台搭建我都能按照自己的想法进行实现，并取得不错的效果；最后我也积极主动寻找锻炼机会，在去年暑假获得了华为实习的机会。-->
+<!--如果能有机会进入重庆大学攻读研究生学位，我定将发挥自己的优势，做出应有的成果。谢谢大家！-->
+<p>根据自己的实际情况，说出自己的特点。用特点+实际做的事+做事效果 的句式更佳，如动手能力比较强，对于大学课程中的实验 ，例如操作系统的实验、大数据平台搭建我都能按照自己的想法进行实现，并取得不错的效果。</p>
+<h2 id="英语自我介绍"><a href="#英语自我介绍" class="headerlink" title="英语自我介绍"></a>英语自我介绍</h2><!--Good morning/afternoon, professors. I am really glad to be here for this interview. Now, please allow me to give you a brief self-introduction. -->
+<!--My name is Xiehuan, 22 years old. I was born in Yunyang, a small but beautiful town in Chongqing province. 
+I entered the Chongqing University 4 years ago, and became a student majoring in Software Engineering. 
+Through studying professional knowledge, I find that I am fond of this major. Up to now, I realize that what I have learned is far from enough, so I take it necessary to continue my learning in this major.-->
+<!--During the four years in Chongqing University, I read a lot. In addition to the books that I need for my major courses, I also read some classic books in the field of computer, such as Compilers principles, Computer Systems A Programmer's Perspective(CSAPP). Moreover, I am not limited to theoretical knowledge, I practice a lot according to the contents of the books. The practice can deepen my understanding of knowledge. So I benefit a lot from it. Last but not least, I'd love to share ideas and discuss them with others. Express our ideas is so important that I often try my best to communicate with the foreign teacher in class, even though my spoken English is not pretty well. -->
+<!--As is well-known, Chongqing University is an outstanding college with perfect academic atmosphere and highly qualified faculty.  And I would appreciate it if you could give me the chance for the further study!-->
+<!-- That's all about my self-introduction. Thanks for your attention!-->
+<p>根据自己的实际情况介绍。</p>
+<h1 id="后续问题收集"><a href="#后续问题收集" class="headerlink" title="后续问题收集"></a>后续问题收集</h1><h2 id="Q1大数据现在的痛点"><a href="#Q1大数据现在的痛点" class="headerlink" title="Q1大数据现在的痛点"></a>Q1大数据现在的痛点</h2><p>我认为，大数据现在存在的问题有：</p>
 <ol>
 <li>数据来源。大数据自然需要海量数据来支撑，但是数据并不是完全开放，比如政府的政务的数据不会公开，企业的用户信息也会成为企业重要的财富等。</li>
 <li>数据安全。大量数据必定涉及大量用户的各种信息，各种数据中又含有大量有价值的信息，导致不怀好意的人使用各种手段对数据进行窃取。</li>
@@ -902,9 +906,10 @@ You should consider upgrading via the &#39;python -m pip install --upgrade pip&#
 <p>我认为大数据与数据仓库和数据挖掘相联系。数据仓库是指面向主题的，集成的，随时间不断变化的数据集合。而数据挖掘是从这种大量的数据集合中，提取出对我们有价值的信息。</p>
 <p>在大数据工程导论这门课上，我配置了Hadoop分布式集群，并使用Eclipse运行了MapReduce项目，让我真实感受到了处理大数据的一种方法。</p>
 <h2 id="Q10反向传播思想"><a href="#Q10反向传播思想" class="headerlink" title="Q10反向传播思想"></a>Q10反向传播思想</h2><p>BP算法的基本思想是，学习过程由信号的正向传播与误差反向传播两个过程组成。正向传播时，输入样本从输入层传入，经过各隐层逐层处理后，传向输出层。若输出层的实际输出与期望输出不符，则转入误差的反向传播阶段。误差反向传播是将输出误差以某种形式通过隐层向输入层逐层反传，并将误差分摊给各层的所有单元，从而获得各层的误差信号，此误差信号即作为修正单元权值的依据。这种信号正向传播与误差反向传播的各层权值调整过程周而复始的进行，权值不断调整的过程，也就是网络学习训练的过程，此过程一直进行到网络输出的误差减少到可接受的程度，或进行到预先设定的学习次数为止。</p>
-<h2 id="Q11The-definition-of-machine-learning"><a href="#Q11The-definition-of-machine-learning" class="headerlink" title="Q11The definition of machine learning"></a>Q11The definition of machine learning</h2><p>根据自己的理解说即可</p>
-<h2 id="Q12The-definition-of-big-data"><a href="#Q12The-definition-of-big-data" class="headerlink" title="Q12The definition of big data"></a>Q12The definition of big data</h2><p>根据自己的理解说即可</p>
-]]></content>
+<h2 id="Q11The-definition-of-machine-learning"><a href="#Q11The-definition-of-machine-learning" class="headerlink" title="Q11The definition of machine learning"></a>Q11The definition of machine learning</h2><p>根据自己的理解说即可，用英语。</p>
+<h2 id="Q12The-definition-of-big-data"><a href="#Q12The-definition-of-big-data" class="headerlink" title="Q12The definition of big data"></a>Q12The definition of big data</h2><p>根据自己的理解说即可，用英语。</p>
+<h2 id="Q13算法的五个特性"><a href="#Q13算法的五个特性" class="headerlink" title="Q13算法的五个特性"></a>Q13算法的五个特性</h2><p>见专业课准备。</p>
+<h2 id="Q14堆和栈的区别"><a href="#Q14堆和栈的区别" class="headerlink" title="Q14堆和栈的区别"></a>Q14堆和栈的区别</h2><h2 id="Q15栈和线性表的区别"><a href="#Q15栈和线性表的区别" class="headerlink" title="Q15栈和线性表的区别"></a>Q15栈和线性表的区别</h2><h2 id="Q16密码学中有哪两大类加密方式"><a href="#Q16密码学中有哪两大类加密方式" class="headerlink" title="Q16密码学中有哪两大类加密方式"></a>Q16密码学中有哪两大类加密方式</h2>]]></content>
       <categories>
         <category>经验分享</category>
       </categories>
@@ -952,8 +957,8 @@ You should consider upgrading via the &#39;python -m pip install --upgrade pip&#
     <url>/2020/05/20/%E5%86%B3%E7%AD%96%E6%A0%91/</url>
     <content><![CDATA[<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><h2 id="什么是决策树"><a href="#什么是决策树" class="headerlink" title="什么是决策树"></a>什么是决策树</h2><p>决策树(Decision Tree）是在已知各种情况发生概率的<a href="https://baike.baidu.com/item/基础/32794" target="_blank" rel="noopener">基础</a>上，通过构成决策树来求取净现值的<a href="https://baike.baidu.com/item/期望/35704" target="_blank" rel="noopener">期望</a>值大于等于零的概率，评价项目风险，判断其可行性的决策分析方法，是直观运用概率分析的一种图解法。由于这种决策分支画成图形很像一棵树的枝干，故称决策树。在机器学习中，决策树是一个预测模型，他代表的是对象属性与对象值之间的一种映射关系。——摘自百度百科</p>
 <p>概念读起来不够感性。为了大家更直观地认识一下决策树，举一个生活中常见的例子：一个面试官要招聘机器学习算法工程师。</p>
-<a id="more"></a>
 <p><img src="/2020/05/20/%E5%86%B3%E7%AD%96%E6%A0%91/决策树举例.png" alt></p>
+<a id="more"></a>
 <p>作为面试官，首先，我们考察应聘者是否在机器学习算法领域中发表过论文，如果发表论文，就直接录用。若没有发表过论文，就考察下一个指标，比如是否是研究生，如果是研究生，就看该研究生的研究领域是否为机器学习相关，若相关，则录用，若不相关，就继续深入考察其他方面，例如在该领域是否有实践等等。</p>
 <h2 id="决策树的特点"><a href="#决策树的特点" class="headerlink" title="决策树的特点"></a>决策树的特点</h2><ul>
 <li>决策树为非参数学习算法</li>
@@ -972,12 +977,11 @@ You should consider upgrading via the &#39;python -m pip install --upgrade pip&#
 <h2 id="解读决策边界"><a href="#解读决策边界" class="headerlink" title="解读决策边界"></a>解读决策边界</h2><p>一幅图就可以直观的解释上面的决策边界：</p>
 <p><img src="/2020/05/20/%E5%86%B3%E7%AD%96%E6%A0%91/决策边界解读.png" alt></p>
 <p>将红色区域所在类别设为A类，黄色区域所在类别设为B类，蓝色区域所在类别设为C类。由决策边界可知，在横轴（X轴）上，当值小于约2.4的时候，分类为A，大于2.4的时候，就看纵轴（Y轴），当在Y轴上的值小于1.8的时候，就分类为B，否则，分类为C。</p>
-<p>通过使用<code>sklearn</code>中封装好的决策树，我们可以很容易地构建上面例子中的决策树。但我们还是要回归第一章的问题，我们如何从原始数据上构建决策树？每个节点在哪个维度上作划分？在该维度上的什么值上作划分？信息熵为我们提供了这个划分标准。</p>
+<p>通过使用<code>sklearn</code>中封装好的决策树，我们可以很容易地构建上面例子中的决策树。但我们还是要回归到第一章提到的问题，我们如何从原始数据上构建决策树？每个节点在哪个维度上作划分？在该维度上的什么值上作划分？信息熵为我们提供了这个划分标准。</p>
 <h1 id="信息熵"><a href="#信息熵" class="headerlink" title="信息熵"></a>信息熵</h1><h2 id="信息熵概念及特性"><a href="#信息熵概念及特性" class="headerlink" title="信息熵概念及特性"></a>信息熵概念及特性</h2><p>熵在信息论中代表随机变量不确定度的度量。熵越大，数据的不确定性越高；熵越小，数据的不确定性越低。熵的计算公式为：</p>
 <script type="math/tex; mode=display">
-H=-\sum_{i=1}^{n} p_{i} \log \left(p_{i}\right)</script><h2 id="信息熵计算举例"><a href="#信息熵计算举例" class="headerlink" title="信息熵计算举例"></a>信息熵计算举例</h2><p><strong>例1</strong>：有三类数据，分别占比为1/3，1/3，1/3，则计算信息熵为：<script type="math/tex">H=-\frac{1}{3} \log \left(\frac{1}{3}\right)-\frac{1}{3} \log \left(\frac{1}{3}\right)-\frac{1}{3} \log \left(\frac{1}{3}\right)</script><br>最后计算结果为1.0986 </p>
-<p><strong>例2</strong>：有三类数据，分别占比为1/10，2/10，7/10</p>
-<script type="math/tex; mode=display">H=-\frac{1}{10} \log \left(\frac{1}{10}\right)-\frac{2}{10} \log \left(\frac{2}{10}\right)-\frac{7}{10} \log \left(\frac{7}{10}\right)</script><p>最后计算结果为0.8018</p>
+H=-\sum_{i=1}^{n} p_{i} \log \left(p_{i}\right)</script><h2 id="信息熵计算举例"><a href="#信息熵计算举例" class="headerlink" title="信息熵计算举例"></a>信息熵计算举例</h2><p><strong>例1</strong>：有三类数据，分别占比为1/3，1/3，1/3，则计算信息熵<script type="math/tex">H=-\frac{1}{3} \log \left(\frac{1}{3}\right)-\frac{1}{3} \log \left(\frac{1}{3}\right)-\frac{1}{3} \log \left(\frac{1}{3}\right)</script>，最后计算结果为1.0986 </p>
+<p><strong>例2</strong>：有三类数据，分别占比为1/10，2/10，7/10，同样计算信息熵<script type="math/tex">H=-\frac{1}{10} \log \left(\frac{1}{10}\right)-\frac{2}{10} \log \left(\frac{2}{10}\right)-\frac{7}{10} \log \left(\frac{7}{10}\right)</script>，最后计算结果为0.8018</p>
 <h2 id="信息熵计算结果解读"><a href="#信息熵计算结果解读" class="headerlink" title="信息熵计算结果解读"></a>信息熵计算结果解读</h2><p>例1中的数据信息熵要大于例2中的数据的信息熵，说明例1的数据的不确定性较大，因为三类数据都占1/3，若给定一个数据，就不知道这个数据更可能属于哪一类。而对于例2，给定一个数据，其有更大的概率为第三类数据，所以例2的信息熵较小。始终记住：<strong>熵在信息论中代表随机变量不确定度的度量</strong>。</p>
 <h1 id="使用信息熵寻找最优划分"><a href="#使用信息熵寻找最优划分" class="headerlink" title="使用信息熵寻找最优划分"></a>使用信息熵寻找最优划分</h1><p>待更新</p>
 ]]></content>
