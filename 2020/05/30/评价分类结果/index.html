@@ -27,12 +27,14 @@
 <meta property="og:site_name" content="缘溪行">
 <meta property="og:description" content="引言在学习kNN，逻辑回归等算法时，常用分类准确度来衡量模型的好坏。这种评价方式，在数据分布合理的情况下，是没有问题的。但是在数据极度有偏的情况下，这种评价方式就暴露出它的缺点了。 举一个很直观的例子：我们需要一个癌症预测系统，我们用数据训练出一个模型，输入体检相关的信息，判断患者是否患有癌症。假如预测数据中，有100个测试样本，其中只有一个是患癌样本。假设模型不需要任何预测，直接将所有患者都预测">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xie-huan.github.io/2020/05/30/%E8%AF%84%E4%BB%B7%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%9C/%E7%B2%BE%E5%87%86%E7%8E%87%E5%92%8C%E5%8F%AC%E5%9B%9E%E7%8E%87%E5%8F%AF%E8%A7%86%E5%8C%96.png">
 <meta property="article:published_time" content="2020-05-30T15:42:22.000Z">
-<meta property="article:modified_time" content="2020-05-30T15:52:51.244Z">
+<meta property="article:modified_time" content="2020-05-30T16:28:39.825Z">
 <meta property="article:author" content="缘溪行">
 <meta property="article:tag" content="机器学习">
 <meta property="article:tag" content="分类问题">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xie-huan.github.io/2020/05/30/%E8%AF%84%E4%BB%B7%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%9C/%E7%B2%BE%E5%87%86%E7%8E%87%E5%92%8C%E5%8F%AC%E5%9B%9E%E7%8E%87%E5%8F%AF%E8%A7%86%E5%8C%96.png">
 
 <link rel="canonical" href="https://xie-huan.github.io/2020/05/30/%E8%AF%84%E4%BB%B7%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%9C/">
 
@@ -208,10 +210,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-05-30 23:42:22 / 修改时间：23:52:51" itemprop="dateCreated datePublished" datetime="2020-05-30T23:42:22+08:00">2020-05-30</time>
+              <time title="创建时间：2020-05-30 23:42:22" itemprop="dateCreated datePublished" datetime="2020-05-30T23:42:22+08:00">2020-05-30</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-31 00:28:39" itemprop="dateModified" datetime="2020-05-31T00:28:39+08:00">2020-05-31</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -243,7 +251,68 @@
         <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>在学习kNN，逻辑回归等算法时，常用分类准确度来衡量模型的好坏。这种评价方式，在数据分布合理的情况下，是没有问题的。但是在数据极度有偏的情况下，这种评价方式就暴露出它的缺点了。</p>
 <p>举一个很直观的例子：我们需要一个癌症预测系统，我们用数据训练出一个模型，输入体检相关的信息，判断患者是否患有癌症。假如预测数据中，有100个测试样本，其中只有一个是患癌样本。假设模型不需要任何预测，直接将所有患者都预测为健康，这样，模型的准确率为99/100=0.99，意味这这个什么都没做的模型，预测的准确率达到了99%！</p>
 <a id="more"></a>
-<h1 id="精准率和召回率"><a href="#精准率和召回率" class="headerlink" title="精准率和召回率"></a>精准率和召回率</h1><h2 id><a href="#" class="headerlink" title=" "></a> </h2>
+<h1 id="精准率和召回率"><a href="#精准率和召回率" class="headerlink" title="精准率和召回率"></a>精准率和召回率</h1><p>显然，由上面直观的例子可以知道，在数据极度有偏的情况下，只使用分类准确率是远远不够的，由此提出了精准率和召回率。在介绍精准率和召回率之前，先说明几个概念。</p>
+<h2 id="混淆矩阵"><a href="#混淆矩阵" class="headerlink" title="混淆矩阵"></a>混淆矩阵</h2><p>对于二分类问题，混淆矩阵（Confusion Matrix）是一个2*2的矩阵。如下表格所示：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">真实\预测</th>
+<th style="text-align:center">0</th>
+<th style="text-align:center">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">TN</td>
+<td style="text-align:center">FP</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">FN</td>
+<td style="text-align:center">TP</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>其中行表示真实值，列表示预测值。表格中的TN表示True Negative，即在一次预测中，真实值为0，其预测值也为0的数量；FP表示False Positive，即真实值为0，预测却为1的数量；FN表示False Negative，即真实值为1，预测值却为0的数量；TP表示True Positive，即真实值为1，预测值也为1的数量。显然，TN与TP的和等于真实值中为0的数量，FN与TP的和等于真实值为1的数量。</p>
+<h2 id="精准率和召回率-1"><a href="#精准率和召回率-1" class="headerlink" title="精准率和召回率"></a>精准率和召回率</h2><p>在混淆矩阵的概念下，提出精准率和召回率。</p>
+<p>精准率定义：precision = TP / （TP + FP）在预测数据为1的数据上，预测准确率；</p>
+<p>召回率定义 ：recall = TP / (TP + FN) 在真实数据为1的数据上，预测的准确率 。</p>
+<p>下面举一个简单的例子</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">真实\预测</th>
+<th style="text-align:center">0</th>
+<th style="text-align:center">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">9978</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">8</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>上表中，计算精准率为precision=8/(12+8)=40%，召回率为recall=8/(8+2)=80%。</p>
+<p>在网上，有一张更精确的图可以可视化精准率和召回率的意义：</p>
+<p><img src="/2020/05/30/%E8%AF%84%E4%BB%B7%E5%88%86%E7%B1%BB%E7%BB%93%E6%9E%9C/精准率和召回率可视化.png" alt></p>
+<h2 id="意义"><a href="#意义" class="headerlink" title="意义"></a>意义</h2><p>同样的，我们举一个简单的例子直观地说明精准率和召回率比分类准确度更有意义。在10000个人中，由9990个人是健康的，10个人是患癌的。模型预测所有人都是健康的，则TN=9990，FN=10，TP=0，FP=0。计算其精准率为：nan（因为分母是0），召回率为0。这就证明了在及其有偏的数据中，精准率和召回率比分类准确度更有意义。</p>
+<h2 id="编程实现精准率、召回率"><a href="#编程实现精准率、召回率" class="headerlink" title="编程实现精准率、召回率"></a>编程实现精准率、召回率</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">TN</span><span class="params">(y_true, y_predict)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> np.sum((y_true == <span class="number">0</span>) &amp; (y_predict==<span class="number">0</span>))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">FP</span><span class="params">(y_true, y_predict)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> np.sum((y_true == <span class="number">0</span>) &amp; (y_predict==<span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">FN</span><span class="params">(y_true, y_predict)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> np.sum((y_true == <span class="number">1</span>) &amp; (y_predict==<span class="number">0</span>))</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">TP</span><span class="params">(y_true, y_predict)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> np.sum((y_true == <span class="number">1</span>) &amp; (y_predict==<span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 混淆矩阵</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">confusion_matrix</span><span class="params">(y_true,y_predict)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> np.array([</span><br><span class="line">        [TN(y_true,y_predict),FP(y_true,y_predict)],</span><br><span class="line">        [FN(y_true,y_predict),TP(y_true,y_predict)]</span><br><span class="line">    ])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 精准率</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">precision_score</span><span class="params">(y_true,y_predict)</span>:</span></span><br><span class="line">    tp = TP(y_true,y_predict)</span><br><span class="line">    fp = FP(y_true,y_predict)</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">return</span> tp / (tp + fp)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0.0</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 召回率</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">recall_score</span><span class="params">(y_true,y_predict)</span>:</span></span><br><span class="line">    tp = TP(y_true,y_predict)</span><br><span class="line">    fn = FN(y_true,y_predict)</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">return</span> tp / (tp + fn)</span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0.0</span></span><br></pre></td></tr></table></figure>
+<p>也可直接调用<code>sklearn</code>中的函数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> confusion_matrix</span><br><span class="line">confusion_matrix(y_test,y_predict)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> precision_score</span><br><span class="line">precision_score(y_test,y_predict)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> recall_score</span><br><span class="line">recall_score(y_test,y_predict)</span><br></pre></td></tr></table></figure>
+<h1 id="精准率和召回率平衡"><a href="#精准率和召回率平衡" class="headerlink" title="精准率和召回率平衡"></a>精准率和召回率平衡</h1><h2 id="解读精准率和召回率"><a href="#解读精准率和召回率" class="headerlink" title="解读精准率和召回率"></a>解读精准率和召回率</h2><p>上面用直观的例子说明了精准率和召回率指标相对于分类准确度更有意义，那么具体而言，如何对其数据大小进行解读呢？它们之间的关系又是怎样的呢？</p>
+
     </div>
 
     
@@ -345,7 +414,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#精准率和召回率"><span class="nav-number">2.</span> <span class="nav-text">精准率和召回率</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">2.1.</span> <span class="nav-text"> </span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#精准率和召回率"><span class="nav-number">2.</span> <span class="nav-text">精准率和召回率</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#混淆矩阵"><span class="nav-number">2.1.</span> <span class="nav-text">混淆矩阵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#精准率和召回率-1"><span class="nav-number">2.2.</span> <span class="nav-text">精准率和召回率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#意义"><span class="nav-number">2.3.</span> <span class="nav-text">意义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编程实现精准率、召回率"><span class="nav-number">2.4.</span> <span class="nav-text">编程实现精准率、召回率</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#精准率和召回率平衡"><span class="nav-number">3.</span> <span class="nav-text">精准率和召回率平衡</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#解读精准率和召回率"><span class="nav-number">3.1.</span> <span class="nav-text">解读精准率和召回率</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -429,7 +498,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共26k字</span>
+  <span class="post-count">博客全站共26.8k字</span>
 </div>
         
 <div class="busuanzi-count">
