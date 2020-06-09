@@ -1165,48 +1165,48 @@ F 1=\frac{2 \cdot \text {precision } \cdot \text {recall}}{\text {precision }+\t
 <table>
 <thead>
 <tr>
-<th>程序名</th>
-<th>功能描述</th>
-<th>版本数</th>
-<th>代码行数</th>
-<th>测试数</th>
+<th style="text-align:center">程序名</th>
+<th style="text-align:center">功能描述</th>
+<th style="text-align:center">版本数</th>
+<th style="text-align:center">代码行数</th>
+<th style="text-align:center">测试总数</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>python</td>
-<td>python程序</td>
-<td>4</td>
-<td>40700</td>
-<td>1240</td>
+<td style="text-align:center">python</td>
+<td style="text-align:center">python程序</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">40,700</td>
+<td style="text-align:center">1,240</td>
 </tr>
 <tr>
-<td>gzip</td>
-<td>数据压缩</td>
-<td>5</td>
-<td>491000</td>
-<td>30</td>
+<td style="text-align:center">gzip</td>
+<td style="text-align:center">数据压缩</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">491,000</td>
+<td style="text-align:center">30</td>
 </tr>
 <tr>
-<td>libtiff</td>
-<td>图像处理</td>
-<td>7</td>
-<td>77000</td>
-<td>219</td>
+<td style="text-align:center">libtiff</td>
+<td style="text-align:center">图像处理</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">77,000</td>
+<td style="text-align:center">219</td>
 </tr>
 <tr>
-<td>space</td>
-<td>ADL解释器</td>
-<td>34</td>
-<td>6199</td>
-<td>461890</td>
+<td style="text-align:center">space</td>
+<td style="text-align:center">ADL解释器</td>
+<td style="text-align:center">34</td>
+<td style="text-align:center">6,199</td>
+<td style="text-align:center">461,890</td>
 </tr>
 <tr>
-<td>共计</td>
-<td>———</td>
-<td>50</td>
-<td>614899</td>
-<td>463,379</td>
+<td style="text-align:center">共计</td>
+<td style="text-align:center">———</td>
+<td style="text-align:center">50</td>
+<td style="text-align:center">614,899</td>
+<td style="text-align:center">463,379</td>
 </tr>
 </tbody>
 </table>
