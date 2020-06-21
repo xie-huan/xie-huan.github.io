@@ -27,12 +27,15 @@
 <meta property="og:site_name" content="缘溪行">
 <meta property="og:description" content="本篇博客为记录我阅读文献的过程开设">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xie-huan.github.io/2020/06/19/%E9%98%85%E8%AF%BB%E6%96%87%E7%8C%AE%E8%AE%B0%E5%BD%95/%E4%BF%A1%E6%81%AF%E6%A8%A1%E5%9E%8B.png">
+<meta property="og:image" content="https://xie-huan.github.io/2020/06/19/%E9%98%85%E8%AF%BB%E6%96%87%E7%8C%AE%E8%AE%B0%E5%BD%95/%E5%85%AC%E5%BC%8F3.png">
 <meta property="article:published_time" content="2020-06-19T11:16:06.000Z">
-<meta property="article:modified_time" content="2020-06-20T01:18:50.872Z">
+<meta property="article:modified_time" content="2020-06-21T08:18:49.700Z">
 <meta property="article:author" content="缘溪行">
 <meta property="article:tag" content="学习笔记">
 <meta property="article:tag" content="经验总结">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xie-huan.github.io/2020/06/19/%E9%98%85%E8%AF%BB%E6%96%87%E7%8C%AE%E8%AE%B0%E5%BD%95/%E4%BF%A1%E6%81%AF%E6%A8%A1%E5%9E%8B.png">
 
 <link rel="canonical" href="https://xie-huan.github.io/2020/06/19/%E9%98%85%E8%AF%BB%E6%96%87%E7%8C%AE%E8%AE%B0%E5%BD%95/">
 
@@ -216,7 +219,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-20 09:18:50" itemprop="dateModified" datetime="2020-06-20T09:18:50+08:00">2020-06-20</time>
+                <time title="修改时间：2020-06-21 16:18:49" itemprop="dateModified" datetime="2020-06-21T16:18:49+08:00">2020-06-21</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -252,7 +255,33 @@
 <p>发现文中表格有点小问题？</p>
 <p>程序切片技术通过提取程序语句的<strong>数据</strong>和<strong>控制依赖关系</strong>，选择影响错误输出的语句的<strong>子集</strong>来构建上下文信息。</p>
 <p>这里需要填坑！！！</p>
-<h1 id="Slice-based-statistical-fault-localization"><a href="#Slice-based-statistical-fault-localization" class="headerlink" title="Slice-based statistical fault localization"></a>Slice-based statistical fault localization</h1>
+<h1 id="Slice-based-statistical-fault-localization"><a href="#Slice-based-statistical-fault-localization" class="headerlink" title="Slice-based statistical fault localization"></a>Slice-based statistical fault localization</h1><p>2020-6-20</p>
+<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>故障定位的最新技术从统计角度分析了一组测试运行的覆盖范围信息，以测量程序实体与程序故障之间的相关性。 但是，覆盖率信息无法识别其执行会影响输出的程序实体，因此会削弱上述相关性。 本文提出了一种基于切片的统计故障定位方法来解决该问题。 我们的方法利用一组测试运行的程序片段来捕获程序实体执行对输出的影响，并使用统计分析来衡量每个有缺陷的程序实体的可疑性。 另外，本文提出了一种新的切片方法，称为近似动态后向切片，以平衡切片的大小和准确性，并将该切片应用于我们的统计方法。 我们使用两个标准基准测试和三个现实生活中的UNIX实用程序作为主题，并将我们的方法与足够数量的故障定位技术进行比较。 实验结果表明，我们的方法可以显着提高故障定位的有效性。</p>
+<h1 id="Toward-Understanding-Information-Models-of-Fault-Localization-Elaborate-is-Not-Always-Better"><a href="#Toward-Understanding-Information-Models-of-Fault-Localization-Elaborate-is-Not-Always-Better" class="headerlink" title="Toward Understanding Information Models of Fault Localization: Elaborate is Not Always Better"></a>Toward Understanding Information Models of Fault Localization: Elaborate is Not Always Better</h1><p>2020-6-21</p>
+<h2 id="摘要-1"><a href="#摘要-1" class="headerlink" title="摘要"></a>摘要</h2><p>故障定位定义了以原始运行时信息为输入的信息模型，描述了支持定位算法的程序行为。很自然，一个详细的信息模型是可取的，并且有可能提高故障定位的有效性，因为它通常描述微妙的、更多的程序运行时行为。事实上，许多关于故障定位的工作都假设并利用了这种直觉。然而，目前还没有大规模的研究来证实或反驳这一民间传说。本文确实填补了这一空白，围绕这一话题展开的一场激烈的争论，促成了这部作品的诞生。为了深入了解信息模型对断层定位的影响，我们进行了大规模的实证研究。具体来说，我们的研究评估了四个有代表性的信息模型，并发现一个详尽的信息模型与定位效果没有很强的相关性。在此基础上，对一个广泛研究的课题，分析并提出了故障定位信息模型的设计方向。</p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>在实践中，调试工程师通常使用手工和繁琐的方法，例如插入打印语句和设置断点等，因此，调试通常会耗费实际项目中大量的时间和资源来确定导致故障的故障位置[1]。<br>为了降低调试成本，研究人员开发了许多自动故障定位技术，识别可能导致故障的可疑位置，并吸引开发人员注意这些位置（如[2]、[3]、[4]、[5]、[6]）。首先，这些技术需要精心设计的输入来启动它们的定位算法。<br>因此，这些本地化技术从原始运行时信息中提取信息模型作为输入，描绘程序运行时行为的轮廓，以分析和理解失败的根本原因。</p>
+<p>与信息模型相关的一个问题是如何设计一个有效的故障定位信息模型。由于精细信息模型能够表达更精细、更多的信息，因此故障定位应该利用精细信息模型来提高其有效性。根据这一直觉，许多研究集中在阐述信息模型，为故障定位提供更精细、更多的信息。在故障定位中广泛使用的信息模型是<strong>二进制执行模型</strong>（BEM）[7]，它使用二进制值（即0或1）来描述测试套件中每个语句的行为，即在测试用例中，值0表示测试用例不执行语句，值1表示测试用例执行语句。由于BEM是一种基本的信息模型，表达的信息量有限，研究者通常以BEM为基础，提出更精细的信息模型来提高故障定位的有效性。Lee等人提出了一种使用<strong>计数执行模型</strong>（CEM）[9]的定位方法，它利用测试用例执行语句的次数来描述每个语句的行为。此外，许多研究者[10]、[11]、[12]结合了依赖信息[13]、[14]、[5]、[15]，提出了用于故障定位的<strong>详细信息模型</strong>（例如，上下文模式[16]、信息流[17]和依赖对[18]）。</p>
+<p>然而，由于一个精细的信息模型为故障定位提供了微妙和更多的信息，因此也有可能增加被噪声或不相关信息所涉及的风险[19]显示了定位算法的误导性程序行为。它可能会限制甚至损害定位的有效性。因此，很自然地会质疑上述直觉在实践中是否成立，如果成立，在多大程度上成立。</p>
+<p>精心制作更好吗？为了回答这个问题，本文进行了广泛的实证研究，以了解信息模型对故障定位的影响。为了启动我们的研究，我们选择了代表设计信息模型三个方向（二进制执行、计数执行和依赖信息）的三个典型信息模型。<br>这三种信息模型分别是BEM[7]、[20]、CEM[8]和Backward Slice模型（BSM[21]、[22]，此外，我们还遵循CEM和BSM的结构，提出了一种新的信息模型：CEM和BSM的组合模型（CEM&amp;BSM）。在文献[8]、[21]、[22]的基础上，BEM模型是基本模型，CEM&amp;BSM是四种模型中信息最为详尽的模型。因此，预计CEM、BSM和CEM&amp;BSM应优于BEM，而CEM&amp;BSM应在四种模型中表现最佳。</p>
+<p>信息模型以定位算法为界，将其作为故障定位分析的输入。上述信息模型与那些使用怀疑度评估的定位算法一起使用。<br>这些定位算法通常被概括为基于频谱的故障定位（SBFL）[20]。基于一个信息模型，SBFL定义了一个可疑度评价公式，用来评价每个语句的可疑度，并给出了所有语句的可疑度排序表。SBFL的基本直觉是，当一个语句的执行与一个失败的测试用例相关联时，它对错误的怀疑会增加，而当它的执行与一个通过的测试用例相关联时，它的怀疑会减少。根据这一直觉，人们提出了许多怀疑度评估公式来评估语句是否存在错误，如Ochiai[7]、Jaccard[23]、Tarantula[3]等。研究表明，SBFL通过减少需要的代码百分比来提高错误定位的有效性检查以查找故障（例如，[24]、[7]、[20]、[25]）。因此，我们利用SBFL的结构研究了四种典型信息模型（BEM、CEM、BSM和CEM&amp;BSM）对故障定位的影响。</p>
+<p>总之，本文做出了以下贡献：</p>
+<p>•我们进行了系统的实验研究，评估了信息模型对故障定位有效性的影响。</p>
+<p>•我们提供了与现有直觉和结果相矛盾的证据[8]详细的信息模型应有助于改进故障定位，也就是说CEM和CEM&amp;BSM会降低故障定位性能。</p>
+<p>•我们展示了设计信息模型的不同方向对故障定位有效性的影响（正面或负面），为研究人员提供了如何设计信息模型以改进故障定位的建议。</p>
+<p>本文的其余部分安排如下。第二节介绍了四种具有SBFL结构的信息模型。第三节和第四节介绍了我们实验研究的设置和结果。第五节介绍了相关工作。</p>
+<p>最后，第六节结束。</p>
+<h2 id="基于SBFL的信息模型"><a href="#基于SBFL的信息模型" class="headerlink" title="基于SBFL的信息模型"></a>基于SBFL的信息模型</h2><p>本节介绍了四种信息模型（BEM、CEM、BSM和CEM&amp;BSM）以及SBFL技术的定位算法。首先，我们假设一个程序P包含一组程序语句S={s1，s2，…，sM}，并针对一组测试用例T={t1，t2，…，tN}（参见图1）运行。<br>在图1中，矩阵N×（M+1）表示SBFL的四个信息模型的基本结构。以下各节将分别描述使用SBFL定位算法的每个信息模型中矩阵元素的定义。</p>
+<p><img src="/2020/06/19/%E9%98%85%E8%AF%BB%E6%96%87%E7%8C%AE%E8%AE%B0%E5%BD%95/信息模型.png" alt></p>
+<h3 id="A-SBFL和BEM"><a href="#A-SBFL和BEM" class="headerlink" title="A.SBFL和BEM"></a>A.SBFL和BEM</h3><p><strong>二进制执行模型（BEM）</strong>使用二进制执行状态，表示测试用例执行或不执行的语句，以显示程序行为的概要。BEM是SBFL使用的初始信息模型，与其他三种信息模型相比，BEM包含的信息最少。因此，遵循传统的策略[8]、[21]、[22]，BEM是我们研究的基线模型。由于SBFL（7）的BEM利用二进制执行状态，如果语句Sj由执行测试TI执行，则图1中的元素席j等于1，否则为0。矩阵最右边列的结果向量r表示测试结果。如果测试用例ti失败，元素ri等于1，否则元素ri等于0。除结果向量外，矩阵的其余部分用矩阵A表示。<br>A的第i行指示ti是否覆盖语句。<br>A的第j列表示语句sj包含在哪个测试用例中。因此，等式1通过使用正在执行或未执行的语句sj和正在通过或失败的测试用例的信息的组合来定义语句sj的4个集合。</p>
+<p>。。。。这里其实就是计算Ncf，Nuf，Ncs，Nus。</p>
+<p>利用这四个统计变量，SBFL定义了许多可疑度计算公式来计算语句错误的可疑度。最近的研究[26]从理论上证明了60个SBFL可疑度评估公式中有9个是在单一故障情况下最有效的公式（称为最大公式）。在这九个极大值公式中，有三个公式是等价的，组成一个ER1’群，其他三个公式组成一个ER5群。表一描述了九个最大公式：Naish1[20]、Naish2[20]、GP13[26]、Wong1[27]、Russel&amp;Rao[20]、Binary[20]、GP02[26]、GP03[26]和GP19[26]，并显示了如何计算sj的怀疑度。</p>
+<h3 id="B-SBFL和CEM"><a href="#B-SBFL和CEM" class="headerlink" title="B.SBFL和CEM"></a>B.SBFL和CEM</h3><p>计数执行模型（CEM）记录测试用例执行一条语句以描述程序行为的次数。Lee等人将CEM集成到SBFL中，利用SBFL的精心设计的算法结构，即它们重新定义图1中的矩阵的元素席j。在他们的方法中，元素席j表示测试用例TI执行的语句Sj的次数（即计数执行数）。使用CEM的SBFL背后的基本直觉是，测试用例中特定语句的计数执行数越大，表明该语句由测试用例执行的频率越高，因此该语句应获得与测试用例结果更为加权的相关性。</p>
+<p><img src="/2020/06/19/%E9%98%85%E8%AF%BB%E6%96%87%E7%8C%AE%E8%AE%B0%E5%BD%95/公式3.png" alt></p>
+<p>如等式3所示，具有SBFL的CEM采用经调整的sigmoid函数M[8]将每条语句的计数执行数映射到[0，1]的范围。sigmoid函数M将为具有较大计数执行数的语句分配更高的映射值，即具有较大计数执行数的语句将获得更多的权重。由于Mi j可以是0到1之间的小数，如果Mi j&gt;0，则具有SBFL的CEM将余数权重（1-Mi j）分别添加到对应的计算a00和a01中。相反，如果Xi＞0，BEM定义的席席J只能为1。余数权重（1～席胡）等于0，因此方程2不包括余数在A00和A01计算中的权重。请注意，在使用边界元的情况下，公式3可以代替公式2来计算四个变量。我们给出了这两个方程，而不是公式3，以证明边界元法和边界元法与SBFL法的区别。<br>因此，在使用CEM的SBFL的情况下，a00（sj）和a01（sj）分别表示与那些不执行语句sj并返回通过和失败测试结果的测试用例相关的累积权重。而a10（sj）和a11（sj）表示与执行sj的测试用例相关联的累积权重，并分别返回通过和失败的测试结果。</p>
+<h3 id="C-SBFL和BSM"><a href="#C-SBFL和BSM" class="headerlink" title="C.SBFL和BSM"></a>C.SBFL和BSM</h3><p>后向切片模型（Backward Slice Model，BSM）是执行输出的后向切片[14]、[4]、[5]，其中后向切片是一组语句，其执行根据数据和控制依赖性影响测试用例的输出。为了捕捉语句的执行对输出的影响，SBFL技术[21]利用BSM重新定义图1中的基本信息模型结构的元素。使用SBFL的BSM的基本思想是，当语句的执行影响到失败测试用例的输出时，语句出错的怀疑度会增加，而当语句的执行影响到通过测试用例的输出时，它的怀疑度会降低。</p>
+<p>设bslice（ti）为测试用例ti输出的后向切片。在SBFL的BSM框架下，席j j（Ti）和0时，元素Xi j等于1。如果后向切片是动态切片[14]，[4]，[5]，那么bslice（ti）根据数据和控制依赖性包括那些其执行影响测试用例ti的输出的语句。为了捕捉语句执行对输出的影响，带SBFL的BSM采用动态切片作为后向切片。</p>
+<p>因此，席j＝1也意味着语句Sj的执行影响Ti的输出，否则席j＝0。除结果向量r外，矩阵的其余部分用矩阵B表示，B的第i行表示语句的执行是否影响ti的输出，B的第j列表示语句sj的执行是否影响测试用例的输出。</p>
+
     </div>
 
     
@@ -354,7 +383,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#增强上下文的错误定位技术"><span class="nav-number">1.</span> <span class="nav-text">增强上下文的错误定位技术</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Slice-based-statistical-fault-localization"><span class="nav-number">2.</span> <span class="nav-text">Slice-based statistical fault localization</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#增强上下文的错误定位技术"><span class="nav-number">1.</span> <span class="nav-text">增强上下文的错误定位技术</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Slice-based-statistical-fault-localization"><span class="nav-number">2.</span> <span class="nav-text">Slice-based statistical fault localization</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#摘要"><span class="nav-number">2.1.</span> <span class="nav-text">摘要</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Toward-Understanding-Information-Models-of-Fault-Localization-Elaborate-is-Not-Always-Better"><span class="nav-number">3.</span> <span class="nav-text">Toward Understanding Information Models of Fault Localization: Elaborate is Not Always Better</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#摘要-1"><span class="nav-number">3.1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">3.2.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基于SBFL的信息模型"><span class="nav-number">3.3.</span> <span class="nav-text">基于SBFL的信息模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#A-SBFL和BEM"><span class="nav-number">3.3.1.</span> <span class="nav-text">A.SBFL和BEM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#B-SBFL和CEM"><span class="nav-number">3.3.2.</span> <span class="nav-text">B.SBFL和CEM</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-SBFL和BSM"><span class="nav-number">3.3.3.</span> <span class="nav-text">C.SBFL和BSM</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -438,7 +467,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共36k字</span>
+  <span class="post-count">博客全站共40.3k字</span>
 </div>
         
 <div class="busuanzi-count">
