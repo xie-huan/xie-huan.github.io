@@ -1456,7 +1456,30 @@ S^2 = \frac{57*(0-0.43)^2 + 43*(1-0.43)^2}{100-1}=0.2475</script><p><img src="/2
 <h1 id="第58节：均值之差的假设检验"><a href="#第58节：均值之差的假设检验" class="headerlink" title="第58节：均值之差的假设检验"></a>第58节：均值之差的假设检验</h1><p>问题题设同上节。</p>
 <p>这里是需要用现有数据，给出能否让我们相信低脂节食有效？</p>
 <p>自己练习试试！！！</p>
-]]></content>
+<h1 id="第59-60节：总体占比的比较"><a href="#第59-60节：总体占比的比较" class="headerlink" title="第59-60节：总体占比的比较"></a>第59-60节：总体占比的比较</h1><p>题目：男性和女性投票之间是否有显著差别。</p>
+<p>男性抽样：投票概率为$P_1$</p>
+<p>女性抽样：投票概率为$P_2$</p>
+<p>则$P_1-P_2$</p>
+<p><img src="/2020/06/13/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/59男女分布.jpg" alt></p>
+<p><img src="/2020/06/13/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Work\Blog\source\_posts\统计学学习笔记\59男女分布.jpg" alt="59男女分布"></p>
+<p><img src="/2020/06/13/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/59置信区间说明.jpg" alt></p>
+<p><img src="/2020/06/13/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/Work\Blog\source\_posts\统计学学习笔记\59置信区间说明.jpg" alt="59置信区间说明"></p>
+<p>z表格查找97.5%！注意不是95%！对应了1.96个标准差。</p>
+<p>则用1.96*0.022=0.043，则最后结果为0.051+-0.043。</p>
+<p>有95%的几率，总体占比之差落在样本占比之差左右0.043范围内。</p>
+<h1 id="第61节：总体占比比较的假设检验"><a href="#第61节：总体占比比较的假设检验" class="headerlink" title="第61节：总体占比比较的假设检验"></a>第61节：总体占比比较的假设检验</h1><p>上一节，使用了95%的置信区间观察了男女占比的差值情况</p>
+<h1 id="第62-67节：线性回归的平方误差"><a href="#第62-67节：线性回归的平方误差" class="headerlink" title="第62-67节：线性回归的平方误差"></a>第62-67节：线性回归的平方误差</h1><p>即最小二乘法的公式：</p>
+<script type="math/tex; mode=display">
+m=\frac{\bar{x}\bar{y}-\bar{xy}}{\bar{x}^2-\bar{x^2}}</script><script type="math/tex; mode=display">
+b=\bar{y}-m\bar{x}</script><h1 id="第68节：决定系数R2"><a href="#第68节：决定系数R2" class="headerlink" title="第68节：决定系数R2"></a>第68节：决定系数R2</h1><p>即$R^2$，见<a href="https://xie-huan.github.io/2020/04/17/R-squared/">评价线性回归的更好标准</a></p>
+<h1 id="第69-70节：例题"><a href="#第69-70节：例题" class="headerlink" title="第69-70节：例题"></a>第69-70节：例题</h1><p>给出数据，计算参数，计算$R^2$</p>
+<h1 id="第71节：协方差"><a href="#第71节：协方差" class="headerlink" title="第71节：协方差"></a>第71节：协方差</h1><p>$cov(X,Y)=E[(X-E(X))(Y-E(Y))]=E[XY-XE(Y)-E(X)Y+E(X)E(Y)]=E(XY)-E(X)E(Y)$</p>
+<p>$E[XY]=\bar{XY}$，$E[X]=\bar{X}$，$E[Y]=\bar{Y}$</p>
+<p>则$cov(X,Y)=\bar{XY}-\bar{X}\bar{Y}$，即最小二乘法中，m的分子！！！</p>
+<p>m的分母可以看成X与X的协方差！！！</p>
+<p>即$m=\frac{cov(X,Y)}{var(X)}$</p>
+<p>神奇的关联。</p>
+<h1 id="第72节：卡方分布"><a href="#第72节：卡方分布" class="headerlink" title="第72节：卡方分布"></a>第72节：卡方分布</h1>]]></content>
       <categories>
         <category>统计学</category>
       </categories>
