@@ -28,18 +28,17 @@
 <meta property="og:description" content="什么是梯度下降法梯度下降法 不是一个机器学习方法 是一种基于搜索的最优化方法 作用：最小化一个损失函数 梯度上升法：最大化一个效用函数">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://xie-huan.github.io/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95.png">
-<meta property="og:image" content="https://xie-huan.github.io/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/%E5%AD%A6%E4%B9%A0%E7%8E%87.png">
 <meta property="og:image" content="https://xie-huan.github.io/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/%E5%AD%A6%E4%B9%A0%E7%8E%87%E5%A4%AA%E5%B0%8F.png">
 <meta property="og:image" content="https://xie-huan.github.io/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/%E5%AD%A6%E4%B9%A0%E7%8E%87%E5%A4%AA%E5%A4%A7.png">
 <meta property="og:image" content="https://xie-huan.github.io/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/%E6%9C%80%E4%BC%98%E8%A7%A3.png">
-<meta property="og:image" content="https://xie-huan.github.io/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%BD%BF%E7%94%A8%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D.png">
 <meta property="og:image" content="https://xie-huan.github.io/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/%E6%95%B0%E6%8D%AE%E4%B8%BE%E4%BE%8B%E5%9B%BE%E7%A4%BA.png">
 <meta property="og:image" content="https://xie-huan.github.io/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%8F%AF%E8%A7%86%E5%8C%96-%E6%AD%A3%E5%B8%B8%E6%83%85%E5%86%B5.png">
 <meta property="og:image" content="https://xie-huan.github.io/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%8F%AF%E8%A7%86%E5%8C%96-%E5%AD%A6%E4%B9%A0%E7%8E%87%E5%B0%8F%E7%9A%84%E6%83%85%E5%86%B5.png">
 <meta property="og:image" content="https://xie-huan.github.io/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%8F%AF%E8%A7%86%E5%8C%96-%E5%AD%A6%E4%B9%A0%E7%8E%87%E5%81%8F%E5%A4%A7%E7%9A%84%E6%83%85%E5%86%B5.png">
 <meta property="og:image" content="https://xie-huan.github.io/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E5%8F%AF%E8%A7%86%E5%8C%96-%E4%B8%8D%E6%94%B6%E6%95%9B%E7%9A%84%E6%83%85%E5%86%B5.png">
+<meta property="og:image" content="https://xie-huan.github.io/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E4%BD%BF%E7%94%A8%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D.png">
 <meta property="article:published_time" content="2020-05-08T11:30:19.000Z">
-<meta property="article:modified_time" content="2020-05-11T15:54:44.974Z">
+<meta property="article:modified_time" content="2020-07-03T15:25:43.253Z">
 <meta property="article:author" content="缘溪行">
 <meta property="article:tag" content="机器学习">
 <meta property="article:tag" content="代码实现">
@@ -229,7 +228,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-11 23:54:44" itemprop="dateModified" datetime="2020-05-11T23:54:44+08:00">2020-05-11</time>
+                <time title="修改时间：2020-07-03 23:25:43" itemprop="dateModified" datetime="2020-07-03T23:25:43+08:00">2020-07-03</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -267,23 +266,27 @@
 </ul>
 <a id="more"></a>
 <p><img src="/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/梯度下降法.png" alt></p>
-<p>导数的正负可以代表损失函数J增大的参数theta的方向，具体来说，就是当导数小于零时（如图中的蓝色点），J增大的方向即是theta减小的方向，同样的，当导数大于零时，J增大的方向就是theta增大的方向。有了方向后，由于我们是想要使用梯度下降，所以应该乘以一个负的系数，即所谓的学习率。</p>
-<p><img src="/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/学习率.png" alt></p>
-<p>当学习率太小的时候，会出现学习速度缓慢的情况：</p>
+<p>　　导数的正负可以代表损失函数$J$增大时参数$\theta$的方向，具体来说，就是当导数小于零时（如图中的蓝色点），$J$增大的方向即是$\theta$减小的方向，同样的，当导数大于零时，$J$增大的方向就是$\theta$增大的方向。有了方向后，目标是最小化损失函数，且由于想要使用梯度下降，所以应该在导数前乘以一个负的系数，即所谓的学习率$\eta$，用以逐步逼近损失函数的极小值，下面列举出了几个关于学习率的特点。</p>
+<ul>
+<li>$\eta$的取值影响获得最优解的速度</li>
+<li>$\eta$取值不合适，可能会得不到最优解</li>
+<li>$\eta$是梯度下降法的一个超参数</li>
+</ul>
+<p>　　当学习率太小的时候，会出现学习速度缓慢的情况：</p>
 <p><img src="/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/学习率太小.png" alt></p>
-<p>当学习率太大的时候，会出现不收敛的情况：</p>
+<p>　　当学习率太大的时候，会出现不收敛的情况：</p>
 <p><img src="/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/学习率太大.png" alt></p>
-<h2 id="梯度下降可能找不到全局最优解"><a href="#梯度下降可能找不到全局最优解" class="headerlink" title="梯度下降可能找不到全局最优解"></a>梯度下降可能找不到全局最优解</h2><p><img src="/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/最优解.png" alt><br>解决方案：</p>
+<h2 id="梯度下降可能找不到全局最优解"><a href="#梯度下降可能找不到全局最优解" class="headerlink" title="梯度下降可能找不到全局最优解"></a>梯度下降可能找不到全局最优解</h2><p><img src="/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/最优解.png" alt></p>
+<p>解决方案：</p>
 <ul>
 <li>多次运行，随机初始点</li>
 <li>梯度下降法的初始点也是一个超参数</li>
 </ul>
-<p><img src="/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/线性回归使用梯度下降.png" alt></p>
 <h1 id="模拟实现梯度下降法"><a href="#模拟实现梯度下降法" class="headerlink" title="模拟实现梯度下降法"></a>模拟实现梯度下降法</h1><p>为了更直观地感受梯度下降法，我们使用一个简单的损失函数来模拟梯度下降法的过程，并可视化出相应结果。</p>
 <h2 id="定义数据"><a href="#定义数据" class="headerlink" title="定义数据"></a>定义数据</h2><p>首先定义数据，设定y为x的二次函数，表达式为<code>y=(x-2.5)^2-1</code>，二次函数的对称轴为2.5。生成数据的过程和对应的图像如下。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt	</span><br><span class="line"></span><br><span class="line">plot_x = np.linspace(<span class="number">-1</span>, <span class="number">6</span>, <span class="number">141</span>)</span><br><span class="line">plot_y = (plot_x - <span class="number">2.5</span>)**<span class="number">2</span> - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">plt.plot(plot_x,plot_y)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
 <p><img src="/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/数据举例图示.png" alt></p>
-<h2 id="定义导数函数"><a href="#定义导数函数" class="headerlink" title="定义导数函数"></a>定义导数函数</h2><p>在梯度下降的过程中，我们需要计算两个不同x对应的函数值之间的差值，则需要定义一个函数来表达上述表达式。设这个函数为J。</p>
+<h2 id="定义导数函数"><a href="#定义导数函数" class="headerlink" title="定义导数函数"></a>定义导数函数</h2><p>在梯度下降的过程中，我们需要计算两个不同x对应的函数值之间的差值，则需要定义一个函数来表达上述表达式。设这个函数为<code>J</code>。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 表达式的函数，根据x求函数值</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">J</span><span class="params">(theta)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> (theta - <span class="number">2.5</span>)**<span class="number">2</span> - <span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p>二次函数求导很简单，上述表达式求导为<code>2*(x-2.5)</code>，用代码实现如下。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 表达式的导数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dJ</span><span class="params">(theta)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span>*(theta - <span class="number">2.5</span>)</span><br></pre></td></tr></table></figure>
@@ -292,17 +295,17 @@
 <p>上述代码给出的结果为：</p>
 <p><img src="/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/梯度下降可视化-正常情况.png" alt></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">2.499891109642585</span><br><span class="line">-0.99999998814289</span><br></pre></td></tr></table></figure>
-<p>从图中红色的点和线中，可以清晰地看到每次梯度下降算法，<code>theta</code>的取值，可以发现，越接近终点，每一步走得越缓慢。最后在<code>theta</code>取值2.49989时停下来，这时的函数值为-0.999，这表明我们的梯度下降算法取得了正确的结果，即在我们想要的位置——损失函数的全局最小值上，停下来。</p>
-<h2 id="改变学习率"><a href="#改变学习率" class="headerlink" title="改变学习率"></a>改变学习率</h2><p>在第一章中，我们说了，学习率太大或太小，都会造成一定的问题，下面我们尝试改变学习率，来看看具体情况如何吧。</p>
+<p>从图中红色的点和线中，可以清晰地看到每次梯度下降算法，<code>theta</code>的取值，可以发现，越接近终点，每一步走得越缓慢。最后在<code>theta</code>取值2.49989时停下来，这时的函数值为-0.999，这表明梯度下降算法取得了正确的结果，即在想要的位置——损失函数的全局最小值上，停下来。</p>
+<h2 id="改变学习率"><a href="#改变学习率" class="headerlink" title="改变学习率"></a>改变学习率</h2><p>在第一章中提到了，学习率太大或太小，都会造成一些问题，下面尝试改变学习率，来看看具体情况如何吧。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">eta=<span class="number">0.01</span></span><br><span class="line"><span class="comment"># 后续代码和前面一致</span></span><br></pre></td></tr></table></figure>
 <p><img src="/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/梯度下降可视化-学习率小的情况.png" alt></p>
 <p>由于将学习率设为0.01，导致梯度下降过程很缓慢，在图中，可由每次下降的红点位置确定，红点越密集，表明下降的步长很小。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">eta = <span class="number">0.8</span></span><br><span class="line"><span class="comment"># 后续代码和前面一致</span></span><br></pre></td></tr></table></figure>
 <p><img src="/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/梯度下降可视化-学习率偏大的情况.png" alt></p>
-<p>将学习率设为0.8时，梯度下降过程虽然取得了正确的结果，但是，由于学习率不是合适的情况，导致下降过程出现上图的折线情况。那如果将学习率设置得更大呢？具体代码这里先不给出，直接给出学习率太大时，会导致的情况。</p>
+<p>将学习率设为0.8时，梯度下降过程虽然取得了正确的结果，但是，由于学习率不是合适的情况，导致下降过程出现上图的折线情况。那如果将学习率设置得更大呢？具体代码这里先不给出，大家可以尝试实现一下学习率过大时，如何绘制图像，这里直接给出学习率太大时，会导致的情况。</p>
 <p><img src="/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/梯度下降可视化-不收敛的情况.png" alt></p>
 <p>由上图可知，学习率太大，可能会导致不收敛！</p>
-<h1 id="线性回归中的梯度下降法"><a href="#线性回归中的梯度下降法" class="headerlink" title="线性回归中的梯度下降法"></a>线性回归中的梯度下降法</h1><p>待更新</p>
+<h1 id="线性回归中的梯度下降法"><a href="#线性回归中的梯度下降法" class="headerlink" title="线性回归中的梯度下降法"></a>线性回归中的梯度下降法</h1><p><img src="/2020/05/08/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E5%8F%8A%E5%85%B6Python%E5%AE%9E%E7%8E%B0/线性回归使用梯度下降.png" alt></p>
 <h1 id="随机梯度下降法"><a href="#随机梯度下降法" class="headerlink" title="随机梯度下降法"></a>随机梯度下降法</h1><h1 id="封装我们的SGD算法并测试"><a href="#封装我们的SGD算法并测试" class="headerlink" title="封装我们的SGD算法并测试"></a>封装我们的SGD算法并测试</h1><h1 id="梯度下降法计算的准确性和调试"><a href="#梯度下降法计算的准确性和调试" class="headerlink" title="梯度下降法计算的准确性和调试"></a>梯度下降法计算的准确性和调试</h1><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1>
     </div>
 
@@ -493,7 +496,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共58.3k字</span>
+  <span class="post-count">博客全站共58.4k字</span>
 </div>
         
 <div class="busuanzi-count">
