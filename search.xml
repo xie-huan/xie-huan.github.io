@@ -2819,12 +2819,29 @@ b=\bar{y}-m\bar{x}</script><h1 id="第68节：决定系数R2"><a href="#第68节
 </ol>
 <h2 id="二、事件的关系与运算"><a href="#二、事件的关系与运算" class="headerlink" title="二、事件的关系与运算"></a>二、事件的关系与运算</h2><ol>
 <li>定义——包含、相等、交（记为$A\cap B$或$AB$）、相容（$AB\neq \O $），互不相容（$AB=\O$，也称为互斥）、并（$A\cup B$）、差（$A-B$，$A-B=A-AB=A\bar{B}$，$A=\bar{B} \Leftrightarrow AB=\O 且 A \cup B=\Omega$)、完备事件组。</li>
-<li>运算法则——吸收律、交换律、结合律、分配律、对偶律（$\overline{A\cup B}=\overline{A}\cap \overline{B}$，$\overline{A\cap B}=\overline{A}\cup \overline{B}$）</li>
+<li>运算法则——吸收律、交换律、结合律、分配律、对偶律（德摩根律）（$\overline{A\cup B}=\overline{A}\cap \overline{B}$，$\overline{A\cap B}=\overline{A}\cup \overline{B}$）</li>
 </ol>
 <h2 id="三、概率的定义"><a href="#三、概率的定义" class="headerlink" title="三、概率的定义"></a>三、概率的定义</h2><ol>
 <li>描述性定义</li>
 <li>统计性定义——定义类似大数定律！频率趋近于概率，频率只是概率的估计。</li>
-<li>公理化定义</li>
+<li>公理化定义——非负性、规范性、可列可加性</li>
+</ol>
+<h2 id="四、古典概型和几何概型"><a href="#四、古典概型和几何概型" class="headerlink" title="四、古典概型和几何概型"></a>四、古典概型和几何概型</h2><h3 id="古典概型"><a href="#古典概型" class="headerlink" title="古典概型"></a>古典概型</h3><ul>
+<li>只有有限个样本点</li>
+<li><p>每个样本点发生的可能性都一样</p>
+</li>
+<li><p>计算方法：</p>
+<ul>
+<li>列举法</li>
+<li>集合对应法——加法原理（完成一件事情有m类方法。第一类方法有n~1~种方法，依次类推，则最后为n~1~+n~2~+……n~m~）、乘法原理（第一步n~1~种方法，第二步n~2~种方法……，则最后为n~1~<em>n~2~</em>……n~m~）、排列、组合</li>
+<li>逆数法（出现至少等字眼）</li>
+</ul>
+</li>
+</ul>
+<h3 id="几何概型"><a href="#几何概型" class="headerlink" title="几何概型"></a>几何概型</h3><h2 id="五、"><a href="#五、" class="headerlink" title="五、"></a>五、</h2><h3 id="事件的独立性"><a href="#事件的独立性" class="headerlink" title="事件的独立性"></a>事件的独立性</h3><ol>
+<li>描述性定义</li>
+<li>数学定义——$P(AB)=P(A)P(B)$</li>
+<li></li>
 </ol>
 ]]></content>
       <categories>
