@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"xie-huan.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="特点 声明式渲染 组件系统 客户端路由 状态管理 构建工具  常见指令 v-model v-bind v-text v-if v-show v-on v-for Vue过滤器filter 组件化（component）  安装和使用vue-cli3.0安装脚手架：npm install -g @vue&#x2F;cli 创建项目：vue create projectName 启动项目：npm run serv">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue学习笔记">
+<meta property="og:url" content="https://xie-huan.github.io/2020/08/17/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+<meta property="og:site_name" content="缘溪行">
+<meta property="og:description" content="特点 声明式渲染 组件系统 客户端路由 状态管理 构建工具  常见指令 v-model v-bind v-text v-if v-show v-on v-for Vue过滤器filter 组件化（component）  安装和使用vue-cli3.0安装脚手架：npm install -g @vue&#x2F;cli 创建项目：vue create projectName 启动项目：npm run serv">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://xie-huan.github.io/2020/08/17/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/reset%E5%92%8Ccheckout.png">
+<meta property="og:image" content="https://xie-huan.github.io/2020/08/17/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/diff.png">
+<meta property="og:image" content="https://xie-huan.github.io/2020/08/17/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E9%97%AE%E9%A2%98.png">
+<meta property="og:image" content="https://xie-huan.github.io/2020/08/17/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/rm.png">
+<meta property="og:image" content="https://xie-huan.github.io/2020/08/17/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AE%9E%E9%99%85%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E5%88%86%E6%94%AF.png">
+<meta property="article:published_time" content="2020-08-17T08:52:22.000Z">
+<meta property="article:modified_time" content="2020-09-02T15:54:20.998Z">
+<meta property="article:author" content="缘溪行">
+<meta property="article:tag" content="学习笔记">
+<meta property="article:tag" content="Vue">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://xie-huan.github.io/2020/08/17/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/reset%E5%92%8Ccheckout.png">
+
+<link rel="canonical" href="https://xie-huan.github.io/2020/08/17/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Vue学习笔记 | 缘溪行</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+	<a href="https://github.com/xie-huan" target="_blank" rel="noopener" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">缘溪行</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://xie-huan.github.io/2020/08/17/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head_pro_used.png">
+      <meta itemprop="name" content="缘溪行">
+      <meta itemprop="description" content="忘路之远近">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="缘溪行">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Vue学习笔记
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-08-17 16:52:22" itemprop="dateCreated datePublished" datetime="2020-08-17T16:52:22+08:00">2020-08-17</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-09-02 23:54:20" itemprop="dateModified" datetime="2020-09-02T23:54:20+08:00">2020-09-02</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h1><ul>
+<li>声明式渲染</li>
+<li>组件系统</li>
+<li>客户端路由</li>
+<li>状态管理</li>
+<li>构建工具</li>
+</ul>
+<h1 id="常见指令"><a href="#常见指令" class="headerlink" title="常见指令"></a>常见指令</h1><ul>
+<li>v-model</li>
+<li>v-bind</li>
+<li>v-text</li>
+<li>v-if</li>
+<li>v-show</li>
+<li>v-on</li>
+<li>v-for</li>
+<li>Vue过滤器filter</li>
+<li>组件化（component）</li>
+</ul>
+<h1 id="安装和使用vue-cli3-0"><a href="#安装和使用vue-cli3-0" class="headerlink" title="安装和使用vue-cli3.0"></a>安装和使用vue-cli3.0</h1><p>安装脚手架：npm install -g @vue/cli</p>
+<p>创建项目：vue create projectName</p>
+<p>启动项目：npm run serve</p>
+<p>也可通过vue ui图形化来创建项目</p>
+<h1 id="8个生命周期"><a href="#8个生命周期" class="headerlink" title="8个生命周期"></a>8个生命周期</h1><p><strong>beforeCreate()</strong> -&gt;  <strong>created()</strong> -&gt; <strong>beforemount()</strong> -&gt; <strong>mounted()</strong> -&gt; <strong>beforeupdate()</strong> -&gt; <strong>updated()</strong> -&gt; <strong>beforedestroy()</strong> -&gt; <strong>destroyed()</strong></p>
+<p>上述8个生命周期为2.x版本，查阅3.x版本的文档，发现最后变为beforeunmount和unmount！而且操作和destroy有区别</p>
+<h1 id="项目基本架构设计"><a href="#项目基本架构设计" class="headerlink" title="项目基本架构设计"></a>项目基本架构设计</h1><ul>
+<li>安装项目需要的插件</li>
+<li>创建规范的目录结构</li>
+<li>添加项目基本配置</li>
+<li>编写基本的框架代码、公共机制</li>
+</ul>
+<p><strong>这里老师的分支管理很方便，值得去学习学习</strong></p>
+<p>此项目需要安装vue-router、axios（发请求）和vue-axios等依赖</p>
+<p>组件使用首字母大写，页面全小写</p>
+<p>v-on可以简写成@</p>
+<p>v-bind可以简写成:</p>
+<p>v-for</p>
+<p>过滤器</p>
+<p>插槽，按照新语法写！！！</p>
+<p>数据传递</p>
+<p>重要！！计算属性=&gt;是一个属性，当计算所需的变量变化时，会自动重新计算该属性</p>
+<p>www.npmjs.com可以查看axios的具体用法</p>
+<h1 id="Github使用学习"><a href="#Github使用学习" class="headerlink" title="Github使用学习"></a>Github使用学习</h1><p>工作区\=\=\=》暂存区（stage）\=\=\=》仓库HEAD(master)</p>
+<p>工作区通过add将文件添加至暂存区，再通过commit提交到仓库。</p>
+<p>涉及到兼容性的时候，使用notepad++保存为UTF-8 without BOM编码。</p>
+<p>git add将文件添加到暂存区</p>
+<p>git commit提交暂存区的文件到仓库</p>
+<p>git reset HEAD — \<file\> ：针对git add后，不想add了，即把改变从暂存区撤回（只改变暂存区）</file\></p>
+<p>git checkout  — \<file\>：如果将README.md使用git add加入暂存区了后，又修改了工作区的文件。但我现在不想要这个修改的文件，可以使用checkout把暂存区的文件拿回工作区。</file\></p>
+<p>git log查看提交历史，通过git log打印出来的id值，就可以找到对应版本。</p>
+<h2 id="回到过去"><a href="#回到过去" class="headerlink" title="回到过去"></a>回到过去</h2><p><img src="/2020/08/17/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/reset和checkout.png" alt></p>
+<p>git reset HEAD~：波浪线表示当前commit之前的一个版本，即上一个版本。</p>
+<p>N个波浪线，表示倒退N个版本，也可以写程HEAD~N</p>
+<h3 id="git-reset-—mixed-HEAD"><a href="#git-reset-—mixed-HEAD" class="headerlink" title="git reset —mixed HEAD~"></a><strong>git reset —mixed HEAD~</strong></h3><p>git reset移动了两棵树，分别是仓库和暂存区（相当于撤销add和commit操作）</p>
+<p>—soft只改变仓库（相当于撤销commit操作）</p>
+<p>—hard三棵树全部改变（相当于全部文件回退到上一次版本）</p>
+<p>默认参数为mixed</p>
+<p>如果版本太多，懒得数个数，可以使用版本号的前几位：git reset a5b1c0</p>
+<p><strong>回滚个别文件</strong>：见上面</p>
+<p>还可以回到现在（通过版本号），如果直接git reset XXX，在工作区是没有现在的文件的，需要使用hard参数将工作区同步。</p>
+<p>git reflog查看所有历史提交ID</p>
+<h2 id="版本对比"><a href="#版本对比" class="headerlink" title="版本对比"></a>版本对比</h2><p><strong>git diff</strong></p>
+<p>还可以对比word里面内容！！！</p>
+<p>git diff 窗口容量有限，显示不完全，使用vim的相关命令即可翻页跳转等操作，还可以输入/进行查找，具体帮助输入h，退出用q。</p>
+<p>也可使用git diff XXX XXX，来比较两个版本的差异</p>
+<p><img src="/2020/08/17/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/diff.png" alt></p>
+<h2 id="修改提交的相关信息"><a href="#修改提交的相关信息" class="headerlink" title="修改提交的相关信息"></a>修改提交的相关信息</h2><p><img src="/2020/08/17/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/问题.png" alt></p>
+<p>在commit时使用带—amend参数即可</p>
+<p>例：git add XXX</p>
+<p>git commit —amend -m “XXXXXX”</p>
+<p>git rm 文件名  删除工作目录和暂存区</p>
+<p><img src="/2020/08/17/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/rm.png" alt></p>
+<p>重命名文件</p>
+<p>git mv game.py wordgame.py</p>
+<h2 id="GIT分支及分支管理"><a href="#GIT分支及分支管理" class="headerlink" title="GIT分支及分支管理"></a>GIT分支及分支管理</h2><p>创建分支：git branch XXX</p>
+<p>切换分支：git checkout XXX</p>
+<p>git log —decorate </p>
+<p>git log —decorate  —oneline</p>
+<p>git log —decorate  —oneline  —graph —all</p>
+<p>—oneline表示一行</p>
+<p>—graph表示可视化</p>
+<p>—all表示显示所有分支</p>
+<h2 id="合并和删除分支"><a href="#合并和删除分支" class="headerlink" title="合并和删除分支"></a>合并和删除分支</h2><p><img src="/2020/08/17/Vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/实际开发中的分支.png" alt></p>
+<p>​    有冲突时：</p>
+<p>手动解决冲突，然后add，commit</p>
+<p>无冲突时：</p>
+<p>直接merge</p>
+<p>git checkout -b feature2（先创建再切换分支）</p>
+<p>不需要的分支进行删除</p>
+<p>git branch -d 分支名</p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div></div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="缘溪行 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="缘溪行 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 学习笔记</a>
+              <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/07/07/PCA/" rel="prev" title="PCA">
+      <i class="fa fa-chevron-left"></i> PCA
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/09/03/%E6%9C%8D%E5%8A%A1%E5%9E%8B%E5%88%B6%E9%80%A0/" rel="next" title="服务型制造">
+      服务型制造 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#特点"><span class="nav-number">1.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见指令"><span class="nav-number">2.</span> <span class="nav-text">常见指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装和使用vue-cli3-0"><span class="nav-number">3.</span> <span class="nav-text">安装和使用vue-cli3.0</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#8个生命周期"><span class="nav-number">4.</span> <span class="nav-text">8个生命周期</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#项目基本架构设计"><span class="nav-number">5.</span> <span class="nav-text">项目基本架构设计</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Github使用学习"><span class="nav-number">6.</span> <span class="nav-text">Github使用学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#回到过去"><span class="nav-number">6.1.</span> <span class="nav-text">回到过去</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-reset-—mixed-HEAD"><span class="nav-number">6.1.1.</span> <span class="nav-text">git reset —mixed HEAD~</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本对比"><span class="nav-number">6.2.</span> <span class="nav-text">版本对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改提交的相关信息"><span class="nav-number">6.3.</span> <span class="nav-text">修改提交的相关信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GIT分支及分支管理"><span class="nav-number">6.4.</span> <span class="nav-text">GIT分支及分支管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#合并和删除分支"><span class="nav-number">6.5.</span> <span class="nav-text">合并和删除分支</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="缘溪行"
+      src="/images/head_pro_used.png">
+  <p class="site-author-name" itemprop="name">缘溪行</p>
+  <div class="site-description" itemprop="description">忘路之远近</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">28</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">27</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/xie-huan" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;xie-huan" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:xiehuan.cs@outlook.com" title="E-Mail → mailto:xiehuan.cs@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      友情链接
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="http://yasuoman.github.io/" title="http:&#x2F;&#x2F;yasuoman.github.io" rel="noopener" target="_blank">yasuoman-王振宇</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="/blank" title="blank">虚位以待</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">缘溪行</span>
+</div>
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共65.6k字</span>
+</div>
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
+
+  
+
+</body>
+</html>
+
+<!-- 动态背景 -->
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
