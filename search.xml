@@ -2856,8 +2856,9 @@ b=\bar{y}-m\bar{x}</script><h1 id="第68节：决定系数R2"><a href="#第68节
 <h3 id="几何概型"><a href="#几何概型" class="headerlink" title="几何概型"></a>几何概型</h3><h2 id="五、"><a href="#五、" class="headerlink" title="五、"></a>五、</h2><h3 id="事件的独立性"><a href="#事件的独立性" class="headerlink" title="事件的独立性"></a>事件的独立性</h3><ol>
 <li>描述性定义</li>
 <li>数学定义——$P(AB)=P(A)P(B)$</li>
-<li></li>
 </ol>
+<h2 id="N、极大似然估计"><a href="#N、极大似然估计" class="headerlink" title="N、极大似然估计"></a>N、极大似然估计</h2><p><img src="/2020/06/26/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/极大似然估计.jpg" alt></p>
+<p><img src="/2020/06/26/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/题目答案.png" alt></p>
 ]]></content>
       <categories>
         <category>统计学</category>
@@ -3135,5 +3136,38 @@ b=\bar{y}-m\bar{x}</script><h1 id="第68节：决定系数R2"><a href="#第68节
 <h1 id="服务型制造的优点"><a href="#服务型制造的优点" class="headerlink" title="服务型制造的优点"></a>服务型制造的优点</h1><h2 id="能够带动制造业高质量发展"><a href="#能够带动制造业高质量发展" class="headerlink" title="能够带动制造业高质量发展"></a>能够带动制造业高质量发展</h2><p>1.服务型制造能够增强制造业竞争力</p>
 <p>2.服务型制造为制造业提供新的增长空间</p>
 <h2 id="有利于服务业高质量发展"><a href="#有利于服务业高质量发展" class="headerlink" title="有利于服务业高质量发展"></a>有利于服务业高质量发展</h2>]]></content>
+  </entry>
+  <entry>
+    <title>图片流程</title>
+    <url>/2020/11/18/%E5%9B%BE%E7%89%87%E6%B5%81%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="前端获取后端图片的流程"><a href="#前端获取后端图片的流程" class="headerlink" title="前端获取后端图片的流程"></a>前端获取后端图片的流程</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>首先，观察业界主流页面的图片、音频或视频，都是以文件存放在<strong>服务器端</strong>，在页面前端的html中，设置src属性为服务器图片地址，如www.storeimages.com/imgs/XXX.jpg。在我们的项目中，也参考这个思路，但由于没有额外的服务器来存放图片、音频或视频资源，所以我们的后端服务器既存放服务，又存放各种资源。</p>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><h3 id="1-将资源存放在后端项目的static文件夹下，如图，以test1的图片为例"><a href="#1-将资源存放在后端项目的static文件夹下，如图，以test1的图片为例" class="headerlink" title="1. 将资源存放在后端项目的static文件夹下，如图，以test1的图片为例"></a>1. 将资源存放在后端项目的static文件夹下，如图，以test1的图片为例</h3><p><img src="/2020/11/18/%E5%9B%BE%E7%89%87%E6%B5%81%E7%A8%8B/Users\79000\AppData\Roaming\Typora\typora-user-images\image-20200826223609347.png" alt="image-20200826223609347"></p>
+<h3 id="2-在application-yml中做如下配置："><a href="#2-在application-yml中做如下配置：" class="headerlink" title="2.在application.yml中做如下配置："></a>2.在application.yml中做如下配置：</h3><p><img src="/2020/11/18/%E5%9B%BE%E7%89%87%E6%B5%81%E7%A8%8B/Users\79000\AppData\Roaming\Typora\typora-user-images\image-20200826223719074.png" alt="image-20200826223719074"></p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/foreign_language_test?serverTimezone=UTC</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.cj.jdbc.Driver</span></span><br><span class="line">  <span class="attr">jpa:</span></span><br><span class="line">    <span class="attr">show-sql:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">properties:</span></span><br><span class="line">      <span class="attr">hibernate:</span></span><br><span class="line">        <span class="attr">format_sql:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">mvc:</span></span><br><span class="line">    <span class="attr">static-path-pattern:</span> <span class="string">'/**'</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line">  <span class="attr">port:</span> <span class="number">8181</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-启动服务，输入后端地址，观察是否能够获取到资源"><a href="#3-启动服务，输入后端地址，观察是否能够获取到资源" class="headerlink" title="3.启动服务，输入后端地址，观察是否能够获取到资源"></a>3.启动服务，输入后端地址，观察是否能够获取到资源</h3><p><img src="/2020/11/18/%E5%9B%BE%E7%89%87%E6%B5%81%E7%A8%8B/Users\79000\AppData\Roaming\Typora\typora-user-images\image-20200826223919797.png" alt="image-20200826223919797"></p>
+<p>这里的路径为直接在端口后加static下文件夹的路径即可，不需要/static。</p>
+<h3 id="4-如果上一步能成功拿到资源，则在数据库设立好相应字段"><a href="#4-如果上一步能成功拿到资源，则在数据库设立好相应字段" class="headerlink" title="4.如果上一步能成功拿到资源，则在数据库设立好相应字段"></a>4.如果上一步能成功拿到资源，则在数据库设立好相应字段</h3><p><img src="/2020/11/18/%E5%9B%BE%E7%89%87%E6%B5%81%E7%A8%8B/Users\79000\AppData\Roaming\Typora\typora-user-images\image-20200826224102359.png" alt="image-20200826224102359"></p>
+<p>数据库需要什么字段就存什么字段，按照你的需要进行设计，比如这里我按照图片的index来标识各个图片的作用。重要的是后面的地址，要对应于上面static目录下的路径。</p>
+<h3 id="5-设立好数据库字段后，可以通过常规的增删改查，查询到数据并返回到前端"><a href="#5-设立好数据库字段后，可以通过常规的增删改查，查询到数据并返回到前端" class="headerlink" title="5.设立好数据库字段后，可以通过常规的增删改查，查询到数据并返回到前端"></a>5.设立好数据库字段后，可以通过常规的增删改查，查询到数据并返回到前端</h3><p>实体：</p>
+<p><img src="/2020/11/18/%E5%9B%BE%E7%89%87%E6%B5%81%E7%A8%8B/Users\79000\AppData\Roaming\Typora\typora-user-images\image-20200826224342122.png" alt="image-20200826224342122"></p>
+<p>repository：</p>
+<p><img src="/2020/11/18/%E5%9B%BE%E7%89%87%E6%B5%81%E7%A8%8B/Users\79000\AppData\Roaming\Typora\typora-user-images\image-20200826224358939.png" alt="image-20200826224358939"></p>
+<p>controller：</p>
+<p><img src="/2020/11/18/%E5%9B%BE%E7%89%87%E6%B5%81%E7%A8%8B/Users\79000\AppData\Roaming\Typora\typora-user-images\image-20200826224420970.png" alt="image-20200826224420970"></p>
+<h3 id="6-前端拿到对应的json数据后："><a href="#6-前端拿到对应的json数据后：" class="headerlink" title="6.前端拿到对应的json数据后："></a>6.前端拿到对应的json数据后：</h3><ul>
+<li>首先赋值给页面的data，例如我赋值给this.imgs（首先得在data里面定义好）：</li>
+</ul>
+<p><img src="/2020/11/18/%E5%9B%BE%E7%89%87%E6%B5%81%E7%A8%8B/Users\79000\AppData\Roaming\Typora\typora-user-images\image-20200826224605222.png" alt="image-20200826224605222"></p>
+<ul>
+<li><p>然后定义一下后端的IP和端口：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">    <span class="keyword">return</span>&#123;</span><br><span class="line">        imgs:[],<span class="comment">//上面说的imgs</span></span><br><span class="line">        baseURL:<span class="string">"http://localhost:8181/"</span><span class="comment">//后端IP和接口</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>有数据后，可以通过v-for语句渲染图片</p>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-image</span> <span class="attr">:src</span>=<span class="string">"baseURL+item.imgSrc"</span>&gt;</span><span class="tag">&lt;/<span class="name">el-image</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>其中的baseURL+item.imgSrc，拼出来就是第三步我们测试的地址。</p>
+<p>至此，流程完毕。</p>
+]]></content>
   </entry>
 </search>
