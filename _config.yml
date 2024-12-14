@@ -10,7 +10,7 @@
 locale                   : "en-US"
 title                    : "Huan Xie"
 title_separator          : "-"
-name                     : &name "Your Name"
+name                     : &name "Huan Xie"
 description              : &description "personal description"
 url                      : https://xie-huan.github.io
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
