@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Huan Xie"
+title                    : "Huan Xie's Homepage"
 title_separator          : "-"
 name                     : &name "Huan Xie"
 description              : &description "personal description"
@@ -22,7 +22,7 @@ repository               : "xie-huan/xie-huan.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Huan Xie"
+  name             : "Huan Xie ｜ 谢欢"
   pronouns         : # example: "she/her"  
   bio              : "A Ph.D. Candidate"
   location         : "China"
