@@ -21,10 +21,11 @@ repository               : "xie-huan/xie-huan.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "cats.png"
   name             : "Huan Xie ｜ 谢欢"
   pronouns         : # example: "she/her"  
-  bio              : "A Ph.D. Candidate"
+  bio              : "A Ph.D. Candidate. The avatar is of my two adopted stray cats, named Java and SangSang. They are 7 and 5 years old respectively, and both are orange tabbies. I'm really looking forward to chatting with you about both academics and our experiences with raising cats.
+"
   location         : "China"
   employer         : "Chongqing University"
   uri              : # URL
