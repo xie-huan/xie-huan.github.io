@@ -16,6 +16,18 @@ I received the B.S. degree in software engineering from [Chongqing University](h
 
 ## Publications **(\* Corresponding Author, # Co-first Author)**
 
+### 2026
+
+- **Huan Xie**, Zhengxiong Deng, Yan Lei*, Maojin Li, Meng Yan, David Lo. Mutants Will Tell: Statistical Mutation-based Multiple Fault Localization for Deep Learning Programs. IEEE Transactions on Software Engineering (TSE), 2026.
+- Chunyan Liu, Yan Lei*, **Huan Xie**, Jinping Wang, Yue Yu, David Lo. Survey on Learning-based Dynamic Fault Localization: From Traditional Machine Learning to Large Language Models. ACM Computing Surveys (CSUR), 2026.
+- Zheyuan Li, Zhenyu Wu, Yan Lei*, **Huan Xie**, Maojin Li, Jian Hu. HiFlaky: Hierarchy-aware flakiness classification. Journal of Systems and Software (JSS), 2026.
+
+### 2025
+
+- Chunyan Liu, **Huan Xie**, Yan Lei*, Zhenyu Wu, Jinping Wang. Sifting Truth from Coincidences: A Two-Stage Positive and  Unlabeled Learning Model for Coincidental Correctness Detection.The 40th IEEE/ACM International Conference on Automated Software Engineering (ASE), 2025.
+- **Huan Xie**, Chunyan Liu, Yan Lei*, Zhenyu Wu, Jinping Wang. From Sparse to Structured: A Diffusion-Enhanced and Feature-Aligned Framework for Coincidental Correctness Detection. The 40th IEEE/ACM International Conference on Automated Software Engineering (ASE), 2025.
+- Junyu Chen, Xiuhua Li, Jinping Wang, **Huan Xie**, Chunyan Liu, Zhenyu Wu, Yan Lei*. AgentTCP: A Collaborative Multi-Agent Framework for Change-Aware Test Case Prioritization.The 32nd Asia-Pacific Software Engineering Conference (APSEC), 2025. (Distinguished Paper Award)
+
 ### 2024
 
 -  **Huan Xie**, Yan Lei*, Meng Yan, Shanshan Li, Xiaoguang Mao, Yue Yu, David Lo. Towards More Precise Coincidental Correctness Detection with Deep Semantic Learning. IEEE Transactions on Software Engineering (TSE), 2024.
@@ -46,6 +58,8 @@ I received the B.S. degree in software engineering from [Chongqing University](h
 
 ## **Awards**
 
+- 2025: Distinguished Paper Award, APSEC 2025
+
 - 2024: ACM SIGSOFT Distinguished Paper Award, ASE 2024
 
 - 2024: IEEE TCSE Distinguished Paper Award, SANER 2024
@@ -53,6 +67,7 @@ I received the B.S. degree in software engineering from [Chongqing University](h
 ## Services
 
 - **Journal Referee**
+  - IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems (TCAD)
   - Empirical Software Engineering (EMSE)
   - The Journal of Supercomputing
   - Knowledge and Information Systems
